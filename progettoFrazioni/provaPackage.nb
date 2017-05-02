@@ -1,0 +1,158 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5479,        150]
+NotebookOptionsPosition[      5067,        130]
+NotebookOutlinePosition[      5402,        145]
+CellTagsIndexPosition[      5359,        142]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Button", "[", 
+  RowBox[{"\"\<Carica Package\>\"", ",", 
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";", 
+    RowBox[{"<<", "myPackage.m"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6729884611272836`*^9, 3.6729885184578543`*^9}, {
+  3.672988579564252*^9, 3.672988591642253*^9}, {3.702271921700444*^9, 
+  3.7022719331387377`*^9}, {3.702272009161738*^9, 3.7022720105793467`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  ButtonBox["\<\"Carica Package\"\>",
+   Appearance->Automatic,
+   ButtonFunction:>(SetDirectory[
+      NotebookDirectory[]]; Get["myPackage.m"]),
+   Evaluator->Automatic,
+   Method->"Preemptive"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.702272019178186*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"getEsempioTipoFrazione", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.702273891419332*^9, 3.702273897829486*^9}, {
+  3.7027221607142353`*^9, 3.70272216695642*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{Private`denominatore$$ = 39, Private`numeratore$$ = 42,
+       Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[Private`numeratore$$], 1, 
+         Style["Numeratore", 
+          Directive[
+           RGBColor[0, 0, 1], Large]]}, 1, 100, 1}, {{
+         Hold[Private`denominatore$$], 10, 
+         Style["Denominatore", 
+          Directive[
+           RGBColor[1, 0, 0], Large]]}, 1, 100, 1}}, Typeset`size$$ = {
+      600., {122., 128.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, Private`numeratore$2186$$ = 0, 
+      Private`denominatore$2187$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {
+         Private`denominatore$$ = 10, Private`numeratore$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[Private`numeratore$$, Private`numeratore$2186$$, 0], 
+          Hold[Private`denominatore$$, Private`denominatore$2187$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> (Private`coloreNumeratore = Blue; 
+         Private`coloreDenominatore = Red; Pane[
+           Text[
+            Row[{
+              
+              With[{Private`numeratore = Private`numeratore$$, 
+                Private`denominatore = Private`denominatore$$}, 
+               HoldForm[Style[
+                  HoldForm[Private`numeratore], 
+                  Directive[Private`coloreNumeratore, 100]]/Style[
+                 HoldForm[Private`denominatore], 
+                 Directive[Private`coloreDenominatore, 100]]]], 
+              Style["   \[EGrave] una ", 20], 
+              Style[
+               Private`getTipoFrazione[
+               Private`numeratore$$, Private`denominatore$$], 30]}]], {600, 
+           250}, Alignment -> Center]), 
+        "Specifications" :> {{{Private`numeratore$$, 1, 
+            Style["Numeratore", 
+             Directive[
+              RGBColor[0, 0, 1], Large]]}, 1, 100, 1, 
+           Appearance -> {"Labeled"}, AppearanceElements -> {"InputField"}, 
+           LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 400}, {{
+           Private`denominatore$$, 10, 
+            Style["Denominatore", 
+             Directive[
+              RGBColor[1, 0, 0], Large]]}, 1, 100, 1, 
+           Appearance -> {"Labeled"}, AppearanceElements -> {"InputField"}, 
+           LabelStyle -> Directive[
+             RGBColor[1, 0, 0], Large], ImageSize -> 400}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{716., {190., 196.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.702722239535306*^9}]
+}, Open  ]]
+},
+WindowSize->{960, 1009},
+WindowMargins->{{Automatic, 330}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 459, 9, 35, "Input"],
+Cell[1042, 33, 292, 8, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1371, 46, 186, 3, 32, "Input"],
+Cell[1560, 51, 3491, 76, 436, "Output"]
+}, Open  ]]
+}
+]
+*)
+
