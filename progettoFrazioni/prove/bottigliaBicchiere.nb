@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    235600,       4286]
-NotebookOptionsPosition[    234411,       4242]
-NotebookOutlinePosition[    234773,       4258]
-CellTagsIndexPosition[    234730,       4255]
+NotebookDataLength[    238295,       4343]
+NotebookOptionsPosition[    237085,       4299]
+NotebookOutlinePosition[    237429,       4314]
+CellTagsIndexPosition[    237386,       4311]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -195,12 +195,12 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`i$$ = 2, Typeset`show$$ = True, 
+     DynamicModuleBox[{$CellContext`i$$ = 3, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{{
          Hold[$CellContext`i$$], 0, "numerator"}, 0, 4, 1}}, 
-      Typeset`size$$ = {450., {221., 229.}}, Typeset`update$$ = 0, 
+      Typeset`size$$ = {360., {177., 183.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
       True, $CellContext`i$11662$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
@@ -235,7 +235,7 @@ Cell[BoxData[
             Circle[{0, 0}, 1], {1, 0.5}]}, PlotRange -> 7], 
         "Specifications" :> {{{$CellContext`i$$, 0, "numerator"}, 0, 4, 1, 
            Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-       ImageSizeCache->{507., {272., 280.}},
+       ImageSizeCache->{411., {223., 230.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -518,7 +518,7 @@ Cell[BoxData[
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{{
          Hold[$CellContext`b$$], 10, "denominator"}, 1, 10, 1}}, 
-      Typeset`size$$ = {675., {396., 404.}}, Typeset`update$$ = 0, 
+      Typeset`size$$ = {540., {316., 324.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
       True, $CellContext`b$16975$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
@@ -548,7 +548,7 @@ Cell[BoxData[
           20], "Specifications" :> {{{$CellContext`b$$, 10, "denominator"}, 1,
             10, 1, Appearance -> "Labeled"}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{732., {447., 455.}},
+       ImageSizeCache->{591., {363., 370.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -2247,7 +2247,6 @@ AePfXZDOaNeKaxrfErlzjXmx8a2RtzrWOp4ybe1XtzzGFvOPbcB2Ye/GOOgN
         2419, 2115, 3463, 2280, 2134, 2422, 3640, 2135, 2286, 2154, 2425, 
         3642, 2155, 2292, 2174, 3568, 2428, 2175, 2298, 3621, 2194, 2431, 
         2195, 2304, 3624, 2214, 2377, 2215, 2221}], Line3DBox[CompressedData["
-
 1:eJwV0LkuRVEUBuAt5nme55nLNc/zTMR4jZVCp+EJJF7BQ+jUEpUoFKJSqVQq
 lZCoNL5TfPnXXmvtc+65jacXifOkEMIVb2khJGeGMEUKdxkhTMoTJujNC+Fe
 L1U9TRrP6SE0yA0GzOvlg510OUMG73ZiZk3qTRp5spMpZ8ni206XnRb1Fs28
@@ -3444,7 +3443,6 @@ I7eX5pHD7eOmyWqigt6FxPGD/Rty3ST6
    PlotRangePadding->{Automatic, Automatic, Automatic},
    Ticks->{Automatic, Automatic, Automatic},
    ViewPoint->{2.705108104741611, -1.9886483046033159`, 0.42150689467623964`},
-   
    ViewVertical->{0.723680117809314, -0.6571870645320588, 
     0.8724093433273321}], TraditionalForm]], "Output",
  CellChangeTimes->{3.702787026987217*^9, 3.7027873107084703`*^9}]
@@ -3914,7 +3912,7 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{Private`numeroBicchieri$$ = 2, 
+     DynamicModuleBox[{Private`numeroBicchieri$$ = 1, 
       Private`numeroBottiglie$$ = 2, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
@@ -3927,7 +3925,7 @@ Cell[BoxData[
          Style["Numero bicchieri", 
           Directive[
            RGBColor[1, 0, 0], Large]]}, 1, 5, 1}}, Typeset`size$$ = {
-      450., {221., 229.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      360., {177., 183.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
       Typeset`skipInitDone$$ = True, Private`numeroBottiglie$14640$$ = 0, 
       Private`numeroBicchieri$14641$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
@@ -3979,7 +3977,7 @@ Cell[BoxData[
             AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
              RGBColor[1, 0, 0], Large], ImageSize -> 400}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{939., {304., 312.}},
+       ImageSizeCache->{730., {250., 257.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -4003,11 +4001,16 @@ Cell[BoxData[
  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
+    RowBox[{"coloreDenominatore", " ", "=", " ", "Blue"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"coloreNumeratore", " ", "=", " ", "Red"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"spaceX", " ", "=", " ", "4.5"}], ";", "\[IndentingNewLine]", 
     RowBox[{"objBottiglie", " ", "=", " ", 
      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"plotRange", " ", "=", " ", "15"}], ";", "\[IndentingNewLine]", 
     RowBox[{"offsetX", " ", "=", " ", 
-     RowBox[{"-", "7"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"-", "19"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"offsetY", " ", "=", " ", "3"}], ";", "\[IndentingNewLine]", 
     RowBox[{"For", "[", 
      RowBox[{
@@ -4018,16 +4021,46 @@ Cell[BoxData[
        RowBox[{"objBottiglie", ",", 
         RowBox[{"{", 
          RowBox[{"Black", ",", 
-          RowBox[{"Circle", "[", 
-           RowBox[{
-            RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Rectangle", "[", 
              RowBox[{
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"i", "*", "3.5"}], ")"}], "+", "offsetX"}], ",", 
-              RowBox[{"0", " ", "+", " ", "offsetY"}]}], "}"}], ",", "1"}], 
-           "]"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
-    "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"3", "+", 
+                 RowBox[{"(", 
+                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", " ", "offsetX"}], 
+                ",", "6"}], "}"}]}], "]"}], ",", " ", 
+            RowBox[{"Disk", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1.5", "+", " ", 
+                 RowBox[{"(", 
+                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                " ", "6"}], "}"}], ",", " ", "1.5"}], "]"}], ",", " ", 
+            "Black", ",", " ", 
+            RowBox[{"Rectangle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1", "+", 
+                 RowBox[{"(", 
+                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                "7"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"2", "+", " ", 
+                 RowBox[{"(", 
+                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                "9"}], "}"}]}], "]"}]}], "}"}]}], "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
     RowBox[{"objBicchieri", " ", "=", " ", 
      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"offsetX", " ", "=", " ", 
@@ -4063,10 +4096,10 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"{", 
           RowBox[{
-           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+           RowBox[{"-", "20"}], ",", "25"}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{
-           RowBox[{"-", "8"}], ",", "8"}], "}"}]}], "}"}]}]}], "]"}]}], 
+           RowBox[{"-", "15"}], ",", "15"}], "}"}]}], "}"}]}]}], "]"}]}], 
    "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"paramentri", " ", "primo", " ", "slider"}], "*)"}], 
@@ -4082,7 +4115,7 @@ Cell[BoxData[
         RowBox[{"\"\<Numero bottiglie\>\"", ",", 
          RowBox[{"Directive", "[", 
           RowBox[{"coloreNumeratore", ",", "Large"}], "]"}]}], "]"}]}], "}"}],
-      ",", "\n", "\t", "1", ",", "5", ",", "1", ",", 
+      ",", "\n", "\t", "1", ",", "10", ",", "1", ",", 
      RowBox[{"(*", 
       RowBox[{
        RowBox[{"valore", " ", "iniziale"}], ",", " ", 
@@ -4142,85 +4175,100 @@ Cell[BoxData[
    3.702792908654257*^9, 3.7027929335483437`*^9}, {3.702793021808606*^9, 
    3.702793061117477*^9}, {3.702793099900166*^9, 3.7027931068505993`*^9}, {
    3.702793139641425*^9, 3.7027932403456097`*^9}, {3.702793277288198*^9, 
-   3.702793312298923*^9}}],
+   3.702786592755204*^9}, {3.702786705635275*^9, 3.7027867677483215`*^9}, {
+   3.7027868149073954`*^9, 3.702786947399642*^9}, {3.702786994274688*^9, 
+   3.7027870222141447`*^9}, {3.7027870607821426`*^9, 
+   3.7027870944721828`*^9}, {3.7027871563381453`*^9, 3.70278725901785*^9}, {
+   3.7027873989410696`*^9, 3.7027874149296045`*^9}}],
 
 Cell[BoxData[
- FormBox[
-  TagBox[
-   FormBox[
-    StyleBox[
-     DynamicModuleBox[{Private`numeroBicchieri$$ = 1, 
-      Private`numeroBottiglie$$ = 2, Typeset`show$$ = True, 
-      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-      "\"untitled\"", Typeset`specs$$ = {{{
-         Hold[Private`numeroBottiglie$$], 1, 
-         Style["Numero bottiglie", 
-          Directive[
-           RGBColor[0, 0, 1], Large]]}, 1, 5, 1}, {{
-         Hold[Private`numeroBicchieri$$], 2, 
-         Style["Numero bicchieri", 
-          Directive[
-           RGBColor[1, 0, 0], Large]]}, 1, 10, 1}}, Typeset`size$$ = {
-      450., {176., 184.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-      Typeset`skipInitDone$$ = True, Private`numeroBottiglie$168486$$ = 0, 
-      Private`numeroBicchieri$168487$$ = 0}, 
-      DynamicBox[Manipulate`ManipulateBoxes[
-       1, TraditionalForm, 
-        "Variables" :> {
-         Private`numeroBicchieri$$ = 2, Private`numeroBottiglie$$ = 1}, 
-        "ControllerVariables" :> {
-          Hold[
-          Private`numeroBottiglie$$, Private`numeroBottiglie$168486$$, 0], 
-          Hold[
-          Private`numeroBicchieri$$, Private`numeroBicchieri$168487$$, 0]}, 
-        "OtherVariables" :> {
-         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-          Typeset`initDone$$, Typeset`skipInitDone$$}, 
-        "Body" :> (Private`objBottiglie = {}; Private`plotRange = 15; 
-         Private`offsetX = -7; Private`offsetY = 3; 
-         For[Private`i = 0, Private`i < Private`numeroBottiglie$$, 
-           Increment[Private`i], 
-           AppendTo[Private`objBottiglie, {Black, 
-             
-             Circle[{Private`i 3.5 + Private`offsetX, 0 + Private`offsetY}, 
-              1]}]]; Private`objBicchieri = {}; Private`offsetX = -9; 
-         Private`offsetY = -6; 
-         For[Private`i = 0, Private`i < Private`numeroBicchieri$$, 
-           Increment[Private`i], 
-           AppendTo[Private`objBicchieri, {Black, 
-             
-             Circle[{Private`i 2 + Private`offsetX, 0 + Private`offsetY}, 
-              1]}]]; Graphics[{Private`objBottiglie, Private`objBicchieri}, 
-           PlotRange -> {{-10, 10}, {-8, 8}}]), 
-        "Specifications" :> {{{Private`numeroBottiglie$$, 1, 
-            Style["Numero bottiglie", 
-             Directive[
-              RGBColor[0, 0, 1], Large]]}, 1, 5, 1, Appearance -> {"Labeled"},
-            AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
-             RGBColor[0, 0, 1], Large], ImageSize -> 170}, {{
-           Private`numeroBicchieri$$, 2, 
-            Style["Numero bicchieri", 
-             Directive[
-              RGBColor[1, 0, 0], Large]]}, 1, 10, 1, 
-           Appearance -> {"Labeled"}, AppearanceElements -> {"InputField"}, 
-           LabelStyle -> Directive[
-             RGBColor[1, 0, 0], Large], ImageSize -> 170}}, "Options" :> {}, 
-        "DefaultOptions" :> {}],
-       ImageSizeCache->{652., {257., 265.}},
-       SingleEvaluation->True],
-      Deinitialization:>None,
-      DynamicModuleValues:>{},
-      SynchronousInitialization->True,
-      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-      UnsavedVariables:>{Typeset`initDone$$},
-      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-     Deployed->True,
-     StripOnInput->False],
-    TraditionalForm],
-   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`numeroBicchieri$$ = 
+    1, $CellContext`numeroBottiglie$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`numeroBottiglie$$], 1, 
+       Style["Numero bottiglie", 
+        Directive[
+         RGBColor[1, 0, 0], Large]]}, 1, 10, 1}, {{
+       Hold[$CellContext`numeroBicchieri$$], 2, 
+       Style["Numero bicchieri", 
+        Directive[
+         RGBColor[0, 0, 1], Large]]}, 1, 10, 1}}, Typeset`size$$ = {
+    360., {117., 123.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`numeroBottiglie$21906$$ = 
+    0, $CellContext`numeroBicchieri$21907$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`numeroBicchieri$$ = 
+        2, $CellContext`numeroBottiglie$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`numeroBottiglie$$, \
+$CellContext`numeroBottiglie$21906$$, 0], 
+        Hold[$CellContext`numeroBicchieri$$, \
+$CellContext`numeroBicchieri$21907$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`coloreDenominatore = 
+        Blue; $CellContext`coloreNumeratore = Red; $CellContext`spaceX = 
+        4.5; $CellContext`objBottiglie = {}; $CellContext`plotRange = 
+        15; $CellContext`offsetX = -19; $CellContext`offsetY = 3; 
+       For[$CellContext`i = 
+         0, $CellContext`i < $CellContext`numeroBottiglie$$, 
+         Increment[$CellContext`i], 
+         AppendTo[$CellContext`objBottiglie, {Black, {Black, 
+            
+            Rectangle[{$CellContext`i $CellContext`spaceX + \
+$CellContext`offsetX, 0}, {
+             3 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
+              6}], 
+            
+            Disk[{1.5 + $CellContext`i $CellContext`spaceX + \
+$CellContext`offsetX, 6}, 1.5], Black, 
+            
+            Rectangle[{
+             1 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
+              7}, {2 + $CellContext`i $CellContext`spaceX + \
+$CellContext`offsetX, 
+              9}]}}]]; $CellContext`objBicchieri = {}; $CellContext`offsetX = \
+-9; $CellContext`offsetY = -6; 
+       For[$CellContext`i = 
+         0, $CellContext`i < $CellContext`numeroBicchieri$$, 
+         Increment[$CellContext`i], 
+         AppendTo[$CellContext`objBicchieri, {Black, 
+           
+           Circle[{$CellContext`i 2 + $CellContext`offsetX, 
+             0 + $CellContext`offsetY}, 1]}]]; 
+       Graphics[{$CellContext`objBottiglie, $CellContext`objBicchieri}, 
+         PlotRange -> {{-20, 25}, {-15, 15}}]), 
+      "Specifications" :> {{{$CellContext`numeroBottiglie$$, 1, 
+          Style["Numero bottiglie", 
+           Directive[
+            RGBColor[1, 0, 0], Large]]}, 1, 10, 1, Appearance -> {"Labeled"}, 
+         AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
+           RGBColor[1, 0, 0], Large], ImageSize -> 
+         170}, {{$CellContext`numeroBicchieri$$, 2, 
+          Style["Numero bicchieri", 
+           Directive[
+            RGBColor[0, 0, 1], Large]]}, 1, 10, 1, Appearance -> {"Labeled"}, 
+         AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
+           RGBColor[0, 0, 1], Large], ImageSize -> 170}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{500., {201., 208.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.702788626128944*^9, 3.702788650247445*^9}, 
    3.702788855671526*^9, {3.70278890193312*^9, 3.702788923890325*^9}, {
    3.702788971882187*^9, 3.7027889822775106`*^9}, 3.702789141226799*^9, 
@@ -4237,13 +4285,21 @@ Cell[BoxData[
    3.702792738470047*^9}, {3.702792909667223*^9, 3.7027929354064217`*^9}, 
    3.702793023123397*^9, 3.702793062529283*^9, 3.702793108043993*^9, 
    3.70279314090604*^9, {3.702793186738727*^9, 3.702793210028027*^9}, {
-   3.702793267254067*^9, 3.7027933130455017`*^9}}]
-}, Open  ]]
+   3.702793267254067*^9, 3.70278654069908*^9}, {3.7027865940171957`*^9, 
+   3.702786600848135*^9}, 3.7027867246892033`*^9, 3.7027867767379007`*^9, 
+   3.7027871025384655`*^9, {3.7027871734753833`*^9, 3.702787259502614*^9}, {
+   3.7027873999273524`*^9, 3.7027874156468196`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Disk", "[", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7027874707101407`*^9, 3.702787479079801*^9}}]
 },
-WindowSize->{1920, 1009},
-WindowMargins->{{960, -960}, {0, Automatic}},
-Magnification:>1.25 Inherited,
-FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+WindowSize->{1366, 695},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -4258,36 +4314,37 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 6611, 168, 1034, "Input"],
-Cell[7194, 192, 2736, 60, 572, "Output"]
+Cell[580, 22, 6611, 168, 712, "Input"],
+Cell[7194, 192, 2736, 60, 470, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9967, 257, 3498, 99, 541, "Input"],
-Cell[13468, 358, 1058, 24, 468, "Output"]
+Cell[9967, 257, 3498, 99, 372, "Input"],
+Cell[13468, 358, 1058, 24, 375, "Output"]
 }, Open  ]],
-Cell[14541, 385, 92, 1, 38, "Input"],
+Cell[14541, 385, 92, 1, 31, "Input"],
 Cell[CellGroupData[{
-Cell[14658, 390, 6281, 118, 639, "Input"],
-Cell[20942, 510, 2662, 55, 922, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23641, 570, 1345, 38, 175, "Input"],
-Cell[24989, 610, 173842, 2839, 558, "Output"]
+Cell[14658, 390, 6281, 118, 412, "Input"],
+Cell[20942, 510, 2662, 55, 750, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[198868, 3454, 1207, 36, 175, "Input"],
-Cell[200078, 3492, 8607, 158, 301, "Output"]
-}, Open  ]],
-Cell[208700, 3653, 1286, 33, 288, "Input"],
-Cell[209989, 3688, 8992, 215, 1347, "Input"],
-Cell[CellGroupData[{
-Cell[219006, 3907, 138, 2, 40, "Input"],
-Cell[219147, 3911, 3831, 85, 636, "Output"]
+Cell[23641, 570, 1345, 38, 132, "Input"],
+Cell[24989, 610, 173837, 2837, 447, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[223015, 4001, 6552, 143, 1042, "Input"],
-Cell[229570, 4146, 4825, 93, 542, "Output"]
-}, Open  ]]
+Cell[198863, 3452, 1207, 36, 132, "Input"],
+Cell[200073, 3490, 8607, 158, 242, "Output"]
+}, Open  ]],
+Cell[208695, 3651, 1286, 33, 192, "Input"],
+Cell[209984, 3686, 8992, 215, 912, "Input"],
+Cell[CellGroupData[{
+Cell[219001, 3905, 138, 2, 31, "Input"],
+Cell[219142, 3909, 3831, 85, 524, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[223010, 3999, 8301, 182, 792, "Input"],
+Cell[231314, 4183, 5580, 107, 426, "Output"]
+}, Open  ]],
+Cell[236909, 4293, 172, 4, 31, "Input"]
 }
 ]
 *)
