@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19326,        493]
-NotebookOptionsPosition[     18888,        473]
-NotebookOutlinePosition[     19232,        488]
-CellTagsIndexPosition[     19189,        485]
+NotebookDataLength[     19699,        496]
+NotebookOptionsPosition[     19261,        476]
+NotebookOutlinePosition[     19605,        491]
+CellTagsIndexPosition[     19562,        488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,9 +42,18 @@ Cell[BoxData[
      "\[IndentingNewLine]", 
      RowBox[{"coloreNumeratore", " ", "=", " ", "Red"}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"spaceX", " ", "=", " ", "5"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"objBottiglie", " ", "=", " ", 
-      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"spaceX", " ", "=", " ", "6.5"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"objNipoti", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";", "    ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "oggetto", " ", "che", " ", "contiene", " ", "la", " ", "lista", " ", 
+       "degli", " ", "oggetti", " ", "grafici", " ", "che", " ", "compongono",
+        " ", "il", " ", "singolo", " ", "nipote", " ", 
+       RowBox[{"(", 
+        RowBox[{"line", ",", " ", "line", ",", " ", 
+         RowBox[{"circle", " ", 
+          RowBox[{"etc", "."}]}]}], ")"}]}], "*)"}], "\[IndentingNewLine]", 
      RowBox[{"plotRange", " ", "=", " ", "15"}], ";", "\[IndentingNewLine]", 
      RowBox[{"offsetX", " ", "=", " ", 
       RowBox[{"-", "19"}]}], ";", "\[IndentingNewLine]", 
@@ -55,7 +64,7 @@ Cell[BoxData[
        RowBox[{"i", "<", " ", "numeroNipoti"}], ",", 
        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
        RowBox[{"AppendTo", "[", 
-        RowBox[{"objBottiglie", ",", "\[IndentingNewLine]", 
+        RowBox[{"objNipoti", ",", "\[IndentingNewLine]", 
          RowBox[{"{", 
           RowBox[{
            RowBox[{"Thickness", "[", ".01", "]"}], ",", "\[IndentingNewLine]", 
@@ -73,7 +82,7 @@ Cell[BoxData[
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "4"}], "}"}]}], "}"}], "]"}], ",", 
+                "3"}], "}"}]}], "}"}], "]"}], ",", 
            RowBox[{"(*", 
             RowBox[{"Gamba", " ", "destra"}], "*)"}], "\[IndentingNewLine]", 
            RowBox[{"Line", "[", 
@@ -84,7 +93,7 @@ Cell[BoxData[
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "4"}], "}"}], ",", 
+                "3"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
                 RowBox[{"4", " ", "+", " ", 
@@ -101,13 +110,13 @@ Cell[BoxData[
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "4"}], "}"}], ",", 
+                "3"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "8"}], "}"}]}], "}"}], "]"}], ",", " ", 
+                "7"}], "}"}]}], "}"}], "]"}], ",", " ", 
            RowBox[{"(*", "Busto", "*)"}], "\[IndentingNewLine]", 
            RowBox[{"Line", "[", 
             RowBox[{"{", 
@@ -117,13 +126,15 @@ Cell[BoxData[
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "8"}], "}"}], ",", 
+                "7"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
-                RowBox[{"0", " ", "+", " ", 
+                RowBox[{"4", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "5"}], "}"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                "5"}], "}"}]}], "}"}], "]"}], ",", " ", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Braccio", " ", "destro"}], "*)"}], "\[IndentingNewLine]", 
            RowBox[{"Line", "[", 
             RowBox[{"{", 
              RowBox[{
@@ -132,13 +143,16 @@ Cell[BoxData[
                 RowBox[{"2", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "8"}], "}"}], ",", 
+                "7"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
-                RowBox[{"4", " ", "+", " ", 
+                RowBox[{"0", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "5"}], "}"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                "5"}], "}"}]}], "}"}], "]"}], ",", " ", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Braccio", " ", "sinistro"}], "*)"}], 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"Circle", "[", 
             RowBox[{
              RowBox[{"{", 
@@ -146,7 +160,7 @@ Cell[BoxData[
                RowBox[{"2", " ", "+", " ", 
                 RowBox[{"(", 
                  RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-               "9"}], "}"}], ",", "1"}], "]"}]}], "\[IndentingNewLine]", 
+               "8.5"}], "}"}], ",", "1.4"}], "]"}]}], "\[IndentingNewLine]", 
           "\[IndentingNewLine]", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
       RowBox[{"(*", 
        RowBox[{
@@ -196,36 +210,38 @@ Cell[BoxData[
       RowBox[{"-", "9"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"offsetY", " ", "=", " ", 
       RowBox[{"-", "6"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"For", "[", 
+     RowBox[{"(*", " ", 
       RowBox[{
-       RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
-       RowBox[{"i", "<", " ", "numeroBicchieri"}], ",", 
-       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"objBicchieri", ",", 
-         RowBox[{"{", 
-          RowBox[{"Black", ",", 
-           RowBox[{"Circle", "[", 
-            RowBox[{
-             RowBox[{"{", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
+         RowBox[{"i", "<", " ", "numeroBicchieri"}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"objBicchieri", ",", 
+           RowBox[{"{", 
+            RowBox[{"Black", ",", 
+             RowBox[{"Circle", "[", 
               RowBox[{
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{"i", "*", "2"}], ")"}], "+", "offsetX"}], ",", 
-               RowBox[{"0", " ", "+", " ", "offsetY"}]}], "}"}], ",", "1"}], 
-            "]"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
-     "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"i", "*", "2"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"0", " ", "+", " ", "offsetY"}]}], "}"}], ",", "1"}],
+               "]"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], ";"}],
+       " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"Graphics", "[", 
       RowBox[{
        RowBox[{"{", "\[IndentingNewLine]", 
-        RowBox[{"objBottiglie", ",", "\[IndentingNewLine]", "objBicchieri"}], 
+        RowBox[{"objNipoti", ",", "\[IndentingNewLine]", "objBicchieri"}], 
         "\[IndentingNewLine]", "}"}], ",", 
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
           RowBox[{"{", 
            RowBox[{
-            RowBox[{"-", "20"}], ",", "25"}], "}"}], ",", 
+            RowBox[{"-", "20"}], ",", "40"}], "}"}], ",", 
           RowBox[{"{", 
            RowBox[{
             RowBox[{"-", "15"}], ",", "15"}], "}"}]}], "}"}]}]}], "]"}]}], 
@@ -242,7 +258,7 @@ Cell[BoxData[
          "valore", " ", "iniziale", " ", "slider", " ", "numeratore"}], 
          "*)"}], "\n", "\t\t", 
         RowBox[{"Style", "[", 
-         RowBox[{"\"\<Numero bottiglie\>\"", ",", 
+         RowBox[{"\"\<Numero Nipoti\>\"", ",", 
           RowBox[{"Directive", "[", 
            RowBox[{"coloreNumeratore", ",", "Large"}], "]"}]}], "]"}]}], 
        "}"}], ",", "\n", "\t", "1", ",", "8", ",", "1", ",", 
@@ -260,131 +276,113 @@ Cell[BoxData[
       RowBox[{"LabelStyle", "->", 
        RowBox[{"Directive", "[", 
         RowBox[{"coloreNumeratore", ",", "Large"}], "]"}]}], ",", "\n", "\t", 
-      RowBox[{"ImageSize", "\[Rule]", "170"}]}], "\n", "\t", "}"}], ",", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"--", "fine"}], " ", "slider", " ", "numeratore"}], "*)"}], 
-    "\n", 
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"numeroBicchieri", ",", "2", ",", 
-        RowBox[{"Style", "[", 
-         RowBox[{"\"\<Numero bicchieri\>\"", ",", 
-          RowBox[{"Directive", "[", 
-           RowBox[{"coloreDenominatore", ",", "Large"}], "]"}]}], "]"}]}], 
-       "}"}], "\[IndentingNewLine]", ",", "1", ",", "10", ",", "1", ",", "\n",
-       "\t", 
-      RowBox[{"Appearance", "->", 
-       RowBox[{"{", "\"\<Labeled\>\"", "}"}]}], ",", "\n", "\t", 
-      RowBox[{"AppearanceElements", "->", 
-       RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
-      RowBox[{"(*", 
-       RowBox[{"rimuovo", " ", "tutto", " ", "tranne", " ", 
-        RowBox[{"l", "'"}], "inputField"}], "*)"}], "\n", "\t", 
-      RowBox[{"LabelStyle", "->", 
-       RowBox[{"Directive", "[", 
-        RowBox[{"coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", "170"}]}], "}"}]}], 
+      RowBox[{"ImageSize", "\[Rule]", "170"}]}], "\n", "\t", "}"}]}], 
+   RowBox[{"(*", 
+    RowBox[{",", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"--", "fine"}], " ", "slider", " ", "numeratore"}], "*)"}], 
+     "\n", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"numeroBicchieri", ",", "2", ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<Numero bicchieri\>\"", ",", 
+           RowBox[{"Directive", "[", 
+            RowBox[{"coloreDenominatore", ",", "Large"}], "]"}]}], "]"}]}], 
+        "}"}], "\[IndentingNewLine]", ",", "1", ",", "10", ",", "1", ",", 
+       "\n", "\t", 
+       RowBox[{"Appearance", "->", 
+        RowBox[{"{", "\"\<Labeled\>\"", "}"}]}], ",", "\n", "\t", 
+       RowBox[{"AppearanceElements", "->", 
+        RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"rimuovo", " ", "tutto", " ", "tranne", " ", 
+         RowBox[{"l", "'"}], "inputField"}], "*)"}], "\n", "\t", 
+       RowBox[{"LabelStyle", "->", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "170"}]}], "}"}]}], "*)"}], 
    "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{
   3.702879674080911*^9, {3.7028797143637123`*^9, 3.7028797160167847`*^9}, {
    3.7028797471405325`*^9, 3.702879809624194*^9}, {3.7028798508252325`*^9, 
-   3.7028799292626896`*^9}}],
+   3.7028799292626896`*^9}, {3.7028802449806805`*^9, 
+   3.7028803620158744`*^9}, {3.7028805073854284`*^9, 
+   3.7028806173160715`*^9}, {3.7028815772554092`*^9, 
+   3.7028815865530577`*^9}, {3.702881661519085*^9, 3.702881855316434*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`numeroBicchieri$$ = 
-    2, $CellContext`numeroNipoti$$ = 8, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`numeroNipoti$$ = 8, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`numeroNipoti$$], 1, 
-       Style["Numero bottiglie", 
+       Style["Numero Nipoti", 
         Directive[
-         RGBColor[1, 0, 0], Large]]}, 1, 8, 1}, {{
-       Hold[$CellContext`numeroBicchieri$$], 2, 
-       Style["Numero bicchieri", 
-        Directive[
-         RGBColor[0, 0, 1], Large]]}, 1, 10, 1}}, Typeset`size$$ = {
-    360., {117., 123.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`numeroNipoti$61626$$ = 
-    0, $CellContext`numeroBicchieri$61627$$ = 0}, 
+         RGBColor[1, 0, 0], Large]]}, 1, 8, 1}}, Typeset`size$$ = {
+    360., {87., 93.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`numeroNipoti$97811$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`numeroBicchieri$$ = 
-        2, $CellContext`numeroNipoti$$ = 1}, "ControllerVariables" :> {
-        Hold[$CellContext`numeroNipoti$$, $CellContext`numeroNipoti$61626$$, 
-         0], 
-        Hold[$CellContext`numeroBicchieri$$, \
-$CellContext`numeroBicchieri$61627$$, 0]}, 
-      "OtherVariables" :> {
+     1, StandardForm, "Variables" :> {$CellContext`numeroNipoti$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`numeroNipoti$$, $CellContext`numeroNipoti$97811$$, 
+         0]}, "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
       "Body" :> ($CellContext`coloreDenominatore = 
         Blue; $CellContext`coloreNumeratore = Red; $CellContext`spaceX = 
-        5; $CellContext`objBottiglie = {}; $CellContext`plotRange = 
+        6.5; $CellContext`objNipoti = {}; $CellContext`plotRange = 
         15; $CellContext`offsetX = -19; $CellContext`offsetY = 3; 
        For[$CellContext`i = 0, $CellContext`i < $CellContext`numeroNipoti$$, 
          Increment[$CellContext`i], 
-         AppendTo[$CellContext`objBottiglie, {
+         AppendTo[$CellContext`objNipoti, {
            Thickness[0.01], 
            
            Line[{{0 + $CellContext`i $CellContext`spaceX + \
 $CellContext`offsetX, 0}, {
              2 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
-              4}}], 
+              3}}], 
            
            Line[{{2 + $CellContext`i $CellContext`spaceX + \
-$CellContext`offsetX, 4}, {
+$CellContext`offsetX, 3}, {
              4 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
               0}}], 
            
            Line[{{2 + $CellContext`i $CellContext`spaceX + \
-$CellContext`offsetX, 4}, {
+$CellContext`offsetX, 3}, {
              2 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
-              8}}], 
+              7}}], 
            
            Line[{{2 + $CellContext`i $CellContext`spaceX + \
-$CellContext`offsetX, 8}, {
-             0 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
-              5}}], 
-           
-           Line[{{2 + $CellContext`i $CellContext`spaceX + \
-$CellContext`offsetX, 8}, {
+$CellContext`offsetX, 7}, {
              4 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
               5}}], 
            
-           Circle[{2 + $CellContext`i $CellContext`spaceX + \
-$CellContext`offsetX, 9}, 
-            1]}]]; $CellContext`objBicchieri = {}; $CellContext`offsetX = -9; \
-$CellContext`offsetY = -6; 
-       For[$CellContext`i = 
-         0, $CellContext`i < $CellContext`numeroBicchieri$$, 
-         Increment[$CellContext`i], 
-         AppendTo[$CellContext`objBicchieri, {Black, 
+           Line[{{2 + $CellContext`i $CellContext`spaceX + \
+$CellContext`offsetX, 7}, {
+             0 + $CellContext`i $CellContext`spaceX + $CellContext`offsetX, 
+              5}}], 
            
-           Circle[{$CellContext`i 2 + $CellContext`offsetX, 
-             0 + $CellContext`offsetY}, 1]}]]; 
-       Graphics[{$CellContext`objBottiglie, $CellContext`objBicchieri}, 
-         PlotRange -> {{-20, 25}, {-15, 15}}]), 
+           Circle[{2 + $CellContext`i $CellContext`spaceX + \
+$CellContext`offsetX, 8.5}, 
+            1.4]}]]; $CellContext`objBicchieri = {}; $CellContext`offsetX = \
+-9; $CellContext`offsetY = -6; 
+       Graphics[{$CellContext`objNipoti, $CellContext`objBicchieri}, 
+         PlotRange -> {{-20, 40}, {-15, 15}}]), 
       "Specifications" :> {{{$CellContext`numeroNipoti$$, 1, 
-          Style["Numero bottiglie", 
+          Style["Numero Nipoti", 
            Directive[
             RGBColor[1, 0, 0], Large]]}, 1, 8, 1, Appearance -> {"Labeled"}, 
          AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
-           RGBColor[1, 0, 0], Large], ImageSize -> 
-         170}, {{$CellContext`numeroBicchieri$$, 2, 
-          Style["Numero bicchieri", 
-           Directive[
-            RGBColor[0, 0, 1], Large]]}, 1, 10, 1, Appearance -> {"Labeled"}, 
-         AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
-           RGBColor[0, 0, 1], Large], ImageSize -> 170}}, "Options" :> {}, 
+           RGBColor[1, 0, 0], Large], ImageSize -> 170}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{500., {189., 196.}},
+     ImageSizeCache->{477., {139., 146.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -396,7 +394,11 @@ $CellContext`offsetY = -6;
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
-  3.7028719958428664`*^9, {3.7028798973838806`*^9, 3.702879942909647*^9}}]
+  3.7028719958428664`*^9, {3.7028798973838806`*^9, 3.702879942909647*^9}, 
+   3.7028803417252803`*^9, 3.702880374395897*^9, {3.702880539996431*^9, 
+   3.702880597182272*^9}, 3.70288062915775*^9, 3.7028815922754297`*^9, 
+   3.7028816624514904`*^9, {3.7028816964189825`*^9, 3.702881753974007*^9}, 
+   3.7028818209723396`*^9, 3.702881859738004*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -413,14 +415,14 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{"0", ",", "0"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"2", ",", "4"}], "}"}]}], "}"}], "]"}], ",", 
+         RowBox[{"2", ",", "3"}], "}"}]}], "}"}], "]"}], ",", 
      RowBox[{"(*", 
       RowBox[{"Gamba", " ", "destra"}], "*)"}], "\[IndentingNewLine]", 
      RowBox[{"Line", "[", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"2", ",", "4"}], "}"}], ",", 
+         RowBox[{"2", ",", "3"}], "}"}], ",", 
         RowBox[{"{", 
          RowBox[{"4", ",", "0"}], "}"}]}], "}"}], "]"}], ",", 
      RowBox[{"(*", 
@@ -429,15 +431,15 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"2", ",", "4"}], "}"}], ",", 
+         RowBox[{"2", ",", "3"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"2", ",", "8"}], "}"}]}], "}"}], "]"}], ",", " ", 
+         RowBox[{"2", ",", "7"}], "}"}]}], "}"}], "]"}], ",", " ", 
      RowBox[{"(*", "Busto", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"Line", "[", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"2", ",", "8"}], "}"}], ",", 
+         RowBox[{"2", ",", "7"}], "}"}], ",", 
         RowBox[{"{", 
          RowBox[{"0", ",", "5"}], "}"}]}], "}"}], "]"}], ",", 
      "\[IndentingNewLine]", 
@@ -445,30 +447,31 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"2", ",", "8"}], "}"}], ",", 
+         RowBox[{"2", ",", "7"}], "}"}], ",", 
         RowBox[{"{", 
          RowBox[{"4", ",", "5"}], "}"}]}], "}"}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{"Circle", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"2", ",", "9"}], "}"}], ",", "1"}], "]"}]}], 
+        RowBox[{"2", ",", "8.5"}], "}"}], ",", "1.5"}], "]"}]}], 
     "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], ",", " ", 
    RowBox[{"PlotRange", "\[Rule]", " ", "Automatic"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7028792812574606`*^9, 3.7028792936442127`*^9}, {
   3.702879336297876*^9, 3.7028794752761583`*^9}, {3.7028795094991913`*^9, 
-  3.7028796274498606`*^9}}],
+  3.7028796274498606`*^9}, {3.7028819396091585`*^9, 3.7028819888572974`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[
-  {Thickness[0.01], LineBox[{{0, 0}, {2, 4}}], LineBox[{{2, 4}, {4, 0}}], 
-   LineBox[{{2, 4}, {2, 8}}], LineBox[{{2, 8}, {0, 5}}], 
-   LineBox[{{2, 8}, {4, 5}}], CircleBox[{2, 9}]},
+  {Thickness[0.01], LineBox[{{0, 0}, {2, 3}}], LineBox[{{2, 3}, {4, 0}}], 
+   LineBox[{{2, 3}, {2, 7}}], LineBox[{{2, 7}, {0, 5}}], 
+   LineBox[{{2, 7}, {4, 5}}], CircleBox[{2, 8.5}, 1.5]},
   PlotRange->Automatic]], "Output",
  CellChangeTimes->{
   3.7028719989548235`*^9, {3.7028792912932973`*^9, 3.7028792944997234`*^9}, {
    3.702879343889891*^9, 3.7028793892606316`*^9}, 3.7028795400781226`*^9, {
-   3.702879586421338*^9, 3.702879627997839*^9}}]
+   3.702879586421338*^9, 3.702879627997839*^9}, {3.702881944503912*^9, 
+   3.702881989912423*^9}}]
 }, Open  ]]
 },
 WindowSize->{1366, 695},
@@ -488,12 +491,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 10995, 270, 1012, "Input"],
-Cell[11578, 294, 4793, 104, 435, "Output"]
+Cell[580, 22, 11999, 291, 1032, "Input"],
+Cell[12582, 315, 4051, 85, 302, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16408, 403, 1992, 56, 192, "Input"],
-Cell[18403, 461, 469, 9, 447, "Output"]
+Cell[16670, 405, 2046, 56, 192, "Input"],
+Cell[18719, 463, 526, 10, 480, "Output"]
 }, Open  ]]
 }
 ]
