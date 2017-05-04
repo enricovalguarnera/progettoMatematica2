@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    238295,       4343]
-NotebookOptionsPosition[    237085,       4299]
-NotebookOutlinePosition[    237429,       4314]
-CellTagsIndexPosition[    237386,       4311]
+NotebookDataLength[    247524,       4574]
+NotebookOptionsPosition[    246110,       4524]
+NotebookOutlinePosition[    246452,       4539]
+CellTagsIndexPosition[    246409,       4536]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -195,7 +195,7 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`i$$ = 3, Typeset`show$$ = True, 
+     DynamicModuleBox[{$CellContext`i$$ = 1, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{{
@@ -4185,7 +4185,7 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`numeroBicchieri$$ = 
-    1, $CellContext`numeroBottiglie$$ = 1, Typeset`show$$ = True, 
+    1, $CellContext`numeroBottiglie$$ = 2, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -4258,7 +4258,7 @@ $CellContext`offsetX,
          AppearanceElements -> {"InputField"}, LabelStyle -> Directive[
            RGBColor[0, 0, 1], Large], ImageSize -> 170}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{500., {201., 208.}},
+     ImageSizeCache->{500., {189., 196.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -4295,10 +4295,235 @@ Cell[BoxData[
  RowBox[{"Disk", "[", 
   RowBox[{"{", 
    RowBox[{"0", ",", "0"}], "}"}], "]"}]], "Input",
- CellChangeTimes->{{3.7027874707101407`*^9, 3.702787479079801*^9}}]
+ CellChangeTimes->{{3.7027874707101407`*^9, 3.702787479079801*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Disk", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"2", ",", "2"}], "}"}], ",", "10"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"disegno", " ", "acqua"}], "*)"}], "\[IndentingNewLine]", 
+        "LightBlue"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"i", "\[NotEqual]", "0"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Rectangle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "i"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Scale", "[", 
+            RowBox[{
+             RowBox[{"Disk", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "i"}], "}"}], ",", "1"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"0.75", "*", "i"}], ",", ".5"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Scale", "[", 
+            RowBox[{
+             RowBox[{"Disk", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1.4", ",", ".5"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Triangle", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "6"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "1.2"}], "}"}]}], "}"}], "]"}], ",", 
+           "\[IndentingNewLine]", "Cyan", ",", "\[IndentingNewLine]", 
+           RowBox[{"Scale", "[", 
+            RowBox[{
+             RowBox[{"Circle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "i"}], "}"}], ",", "1"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"0.75", "*", "i"}], ",", ".5"}], "}"}]}], "]"}]}], 
+          "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"disegno", " ", "bottiglia"}], "*)"}], "\[IndentingNewLine]", 
+       "Black", ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"Circle", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "4"}], "}"}], ",", "1"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", ".5"}], "}"}]}], "]"}], ",", " ", 
+       RowBox[{"(*", 
+        RowBox[{"cerchio", " ", "superiore"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1.4"}], ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "3"}], ",", "4"}], "}"}]}], "}"}], "]"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"linea", " ", "sinistra"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1.4", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", "4"}], "}"}]}], "}"}], "]"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"linea", " ", "destra"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"Circle", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.4", ",", ".5"}], "}"}]}], "]"}]}], 
+      RowBox[{"(*", 
+       RowBox[{"cerchio", " ", "base"}], "*)"}], "\[IndentingNewLine]", "}"}],
+      ",", 
+     RowBox[{"PlotRange", "\[Rule]", "7"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"paramentri", " ", "primo", " ", "slider"}], "*)"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"i", ",", 
+       RowBox[{"(*", 
+        RowBox[{"variabile", " ", "agganciata", " ", "allo", " ", "slider"}], 
+        "*)"}], "\[IndentingNewLine]", "0", ",", 
+       RowBox[{"(*", 
+        RowBox[{"valore", " ", "iniziale"}], "*)"}], "\[IndentingNewLine]", 
+       "\"\<numerator\>\""}], 
+      RowBox[{"(*", 
+       RowBox[{"etichetta", " ", "dello", " ", "slider"}], "*)"}], 
+      "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", "0", ",", "4",
+      ",", 
+     RowBox[{"(*", "range", "*)"}], "\[IndentingNewLine]", "1", ",", 
+     RowBox[{"(*", 
+      RowBox[{"step", " ", "di", " ", "modifica"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.70278813358209*^9, 3.70278822300259*^9}, {
+   3.702788337168264*^9, 3.7027883372368016`*^9}, {3.702788421079937*^9, 
+   3.7027884584935474`*^9}, {3.7027885312193456`*^9, 3.702788540210165*^9}, {
+   3.702788603650358*^9, 3.702788603819599*^9}, {3.702788685902554*^9, 
+   3.7027887091998167`*^9}, {3.7027887424858375`*^9, 3.702788926005231*^9}, {
+   3.702789531844905*^9, 3.7027895368851967`*^9}, {3.702789567719431*^9, 
+   3.702789641796628*^9}, 3.702789802757524*^9, {3.702789906885686*^9, 
+   3.702789956767661*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 2, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`i$$], 0, "numerator"}, 0, 4, 1}}, Typeset`size$$ = {
+    360., {177., 183.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$55863$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$55863$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Graphics[{Disk[{2, 2}, 10]; LightBlue, 
+         If[$CellContext`i$$ != 0, {
+           Rectangle[{-1, 0}, {1, $CellContext`i$$}], 
+           Scale[
+            Disk[{0, $CellContext`i$$}, 1], {0.75 $CellContext`i$$, 0.5}], 
+           Scale[
+            Disk[{0, 0}, 1], {1.4, 0.5}], 
+           Triangle[{{0, 0}, {0, 6}, {1, 1.2}}], Cyan, 
+           Scale[
+            Circle[{0, $CellContext`i$$}, 1], {0.75 $CellContext`i$$, 0.5}]}],
+          Black, 
+         Scale[
+          Circle[{0, 4}, 1], {3, 0.5}], 
+         Line[{{-1.4, 0}, {-3, 4}}], 
+         Line[{{1.4, 0}, {3, 4}}], 
+         Scale[
+          Circle[{0, 0}, 1], {1.4, 0.5}]}, PlotRange -> 7], 
+      "Specifications" :> {{{$CellContext`i$$, 0, "numerator"}, 0, 4, 1, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {223., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.702787977784521*^9, {3.702788134228568*^9, 3.7027882233339605`*^9}, {
+   3.7027884223116627`*^9, 3.7027884590481553`*^9}, 3.7027885432910976`*^9, 
+   3.702788604635419*^9, {3.702788691966178*^9, 3.702788781015225*^9}, {
+   3.702788821295851*^9, 3.7027889262902555`*^9}, {3.702789622173301*^9, 
+   3.702789642797397*^9}, 3.7027898162207565`*^9, {3.7027899271313567`*^9, 
+   3.702789957069867*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"cerchio", " ", "base"}], "*)"}]], "Input",
+ CellChangeTimes->{3.7027881234905863`*^9},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Triangle", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1.2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1.2"}], "}"}]}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7027896546515675`*^9, 3.7027897766963267`*^9}}]
 },
-WindowSize->{1366, 695},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{943, 686},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -4335,16 +4560,22 @@ Cell[198863, 3452, 1207, 36, 132, "Input"],
 Cell[200073, 3490, 8607, 158, 242, "Output"]
 }, Open  ]],
 Cell[208695, 3651, 1286, 33, 192, "Input"],
-Cell[209984, 3686, 8992, 215, 912, "Input"],
+Cell[209984, 3686, 8992, 215, 932, "Input"],
 Cell[CellGroupData[{
 Cell[219001, 3905, 138, 2, 31, "Input"],
 Cell[219142, 3909, 3831, 85, 524, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[223010, 3999, 8301, 182, 792, "Input"],
-Cell[231314, 4183, 5580, 107, 426, "Output"]
+Cell[223010, 3999, 8301, 182, 832, "Input"],
+Cell[231314, 4183, 5580, 107, 402, "Output"]
 }, Open  ]],
-Cell[236909, 4293, 172, 4, 31, "Input"]
+Cell[236909, 4293, 172, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[237106, 4301, 5787, 144, 652, "Input"],
+Cell[242896, 4447, 2647, 55, 470, "Output"]
+}, Open  ]],
+Cell[245558, 4505, 157, 4, 31, "Input"],
+Cell[245718, 4511, 388, 11, 31, "Input"]
 }
 ]
 *)
