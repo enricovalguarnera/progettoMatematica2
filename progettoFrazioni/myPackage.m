@@ -8,7 +8,6 @@ ClearAll["ProgettoFrazioni`*"];
 
 BeginPackage["ProgettoFrazioni`"]
 
-	getGame1::usage = "fa cose"
 	getEsempioTipoFrazione::usage = "Funzione che restituisce l'esempio 1"
 
 Begin["Private`"];
@@ -35,7 +34,7 @@ Begin["Private`"];
 	
 		Manipulate[
 			coloreNumeratore = Blue; (*colore per il numeratore*)
-			coloreDenominatore = Red;(*colore per il denominatore*)
+			coloreDenominatore = RGBColor["#008C00"];(*colore per il denominatore*)
 			Pane[
 				Text[
 					Row[{With[{numeratore=numeratore,denominatore=denominatore},
@@ -63,115 +62,7 @@ Begin["Private`"];
 	)
 
 
-getGame1[] := (
-	initMousePos = {-1, -1};
-	dimPianoX = 20;
-	dimPianoY = 12;
-	 (*numero di lego inserite nel piano*)
-	nLegos = 7;
-	 (*dimensioni lego inserite*)
 
-	legos = {{2, 8}, {2, 4}, {2, 3}, {2, 2}, {2, 1}, {1, 1}, {1, 1}};
-	 (*posizioni delle lego sul piano*)
-
-	legoPositions = {{1, 0}, {3, 0}, {3, 4}, {5, 0}, {3, 7}, {9, 0}, {8,
-	    2}};
-	(*colori delle lego*)(*TODO fissa il colore per dimensione*)
-
-	legoColors = {Blue, Green, Red , Yellow, Cyan, Brown, Orange};
-	(*si sta spostando una lego?*)
-	moving = False;
-	 (*identificativo della lego che viene spostata*)
-	movingLego = -1;
-	(*lista di oggetti da disegnare*)
-
-	obj = getRectangles[legoPositions, legos];
-	Pane[
- DynamicModule[
-  {},
-  EventHandler[
-   legosPrint[Dynamic@obj],
-   {
-    (*evento mouse cliccato,
-    controlla se \[EGrave] presente un blocchetto lego sotto il click*)
-
-    "MouseDown" :> (
-      (*recupero coordinate mouse*)
-
-      initMousePos = MousePosition["Graphics"];
-      xMouse = initMousePos[[1]];
-      yMouse = initMousePos[[2]];
-      For[i = 1, i <= nLegos, i++,
-       If[
-        xMouse >= legoPositions[[i, 1]] &&
-         xMouse <= (legos[[i, 1]] + legoPositions[[i, 1]]) &&
-
-          yMouse >= legoPositions[[i, 2]] &&
-         yMouse <= (legos[[i, 2]] + legoPositions[[i, 2]]),
-        moving = True;
-        movingLego = i
-        ]
-       ]
-      ),
-    (*evento mouse rilasciato, ferma il movimento*)
-
-    "MouseUp" :> (
-      moving = False;
-      movingLego = -1;
-      ),
-    (*evento mouse trascinato, sposta il blocchetto selezionato*)
-
-    "MouseDragged" :> (
-      (*recupero coordinate mouse*)
-
-      initMousePos = MousePosition["Graphics"];
-      xMouse = initMousePos[[1]];
-      yMouse = initMousePos[[2]];
-      (*TODO non permettere uscita dal piano*)
-
-      If[xMouse >= 0 && xMouse <= dimPianoX && yMouse >= 0 &&
-        yMouse <= dimPianoY,
-       If[moving,
-        legoPositions[[movingLego, 1]] = Floor[xMouse];
-        legoPositions[[movingLego, 2]] = Floor[yMouse];
-        obj = getRectangles[legoPositions, legos];
-        ]
-       ]
-      )
-    }, PassEventsDown -> True
-   ]
-  ]
- , {800, 600}, Alignment -> Center])
-
-
-(*funzione che restituisce le informazioni per disegnare*)
-
-getRectangles[legoPositions_, legos_] := (
-  objTmp = {};
-  (*scorro lego per lego e recupero le info per disegnare i \
-rettangoli*)
-  For[i = 1, i <= nLegos, i++,
-   angoloInferiore = Part[legoPositions, i];
-   dimensioneLego = Part[legos, i];
-   angoloSuperiore = angoloInferiore + dimensioneLego;
-   testo = dimensioneLego[[1]]*dimensioneLego[[2]]/16;
-   AppendTo[
-    objTmp, {legoColors[[i]], EdgeForm[Directive[Thick, Black]],
-     Rectangle[angoloInferiore, angoloSuperiore],
-     Text[Style[testo, Black, Bold],
-      angoloInferiore + {dimensioneLego[[1]]/2,
-        dimensioneLego[[2]]/2}]}];
-   ];
-  (*ritorno la lista di rettangoli*)
-  objTmp
-  )
-
-(*Funzione che disegna i rettangoli*)
-	legosPrint[obj_] := (
-  Graphics[{obj}, PlotRange -> {{0, dimPianoX}, {0, dimPianoY}},
-   ImageSize -> 800, Background -> White,
-   GridLines -> {Range[0, dimPianoX, 1], Range[0, dimPianoY, 1]}]
-  )
  
 	
 End[] (*End of *)
