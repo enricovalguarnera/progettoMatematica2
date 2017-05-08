@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46258,       1089]
-NotebookOptionsPosition[     45698,       1065]
-NotebookOutlinePosition[     46042,       1080]
-CellTagsIndexPosition[     45999,       1077]
+NotebookDataLength[     42692,        991]
+NotebookOptionsPosition[     42133,        967]
+NotebookOutlinePosition[     42477,        982]
+CellTagsIndexPosition[     42434,        979]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -649,8 +649,10 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"objNipoti", " ", "=", " ", 
        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"spaceX", " ", "=", " ", "100"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"offsetX", " ", "=", " ", "100"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"spaceX", " ", "=", " ", "140"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"spaceY", " ", "=", " ", "200"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"offsetX", " ", "=", " ", 
+       RowBox[{"-", "600"}]}], ";", "\[IndentingNewLine]", 
       "\[IndentingNewLine]", 
       RowBox[{"For", "[", 
        RowBox[{
@@ -661,7 +663,7 @@ Cell[BoxData[
          RowBox[{"objNipoti", ",", "\[IndentingNewLine]", 
           RowBox[{"{", 
            RowBox[{
-            RowBox[{"Thickness", "[", ".01", "]"}], ",", 
+            RowBox[{"Thickness", "[", ".005", "]"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Line", "[", 
              RowBox[{"{", 
@@ -670,14 +672,15 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{"0", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "0"}], "}"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"0", " ", "+", " ", "spaceY"}]}], "}"}], ",", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "3"}], "}"}]}], "}"}], "]"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"60", "+", " ", "spaceY"}]}], "}"}]}], "}"}], "]"}], 
+            ",", 
             RowBox[{"(*", 
              RowBox[{"Gamba", " ", "destra"}], "*)"}], "\[IndentingNewLine]", 
             RowBox[{"Line", "[", 
@@ -685,16 +688,17 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "3"}], "}"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"60", "+", " ", "spaceY"}]}], "}"}], ",", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"4", " ", "+", " ", 
+                 RowBox[{"80", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "0"}], "}"}]}], "}"}], "]"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"0", " ", "+", " ", "spaceY"}]}], "}"}]}], "}"}], 
+             "]"}], ",", 
             RowBox[{"(*", 
              RowBox[{"Gamba", " ", "sinistra"}], "*)"}], 
             "\[IndentingNewLine]", 
@@ -703,32 +707,34 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "3"}], "}"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"60", " ", "+", " ", "spaceY"}]}], "}"}], ",", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "7"}], "}"}]}], "}"}], "]"}], ",", " ", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"140", " ", "+", " ", "spaceY"}]}], "}"}]}], "}"}], 
+             "]"}], ",", " ", 
             RowBox[{"(*", "Busto", "*)"}], "\[IndentingNewLine]", 
             RowBox[{"Line", "[", 
              RowBox[{"{", 
               RowBox[{
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "7"}], "}"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"140", " ", "+", " ", "spaceY"}]}], "}"}], ",", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"4", " ", "+", " ", 
+                 RowBox[{"80", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "5"}], "}"}]}], "}"}], "]"}], ",", " ", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"100", " ", "+", " ", "spaceY"}]}], "}"}]}], "}"}], 
+             "]"}], ",", " ", 
             RowBox[{"(*", " ", 
              RowBox[{"Braccio", " ", "destro"}], "*)"}], 
             "\[IndentingNewLine]", 
@@ -737,16 +743,17 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"2", " ", "+", " ", 
+                 RowBox[{"40", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "7"}], "}"}], ",", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"140", " ", "+", " ", "spaceY"}]}], "}"}], ",", 
                RowBox[{"{", 
                 RowBox[{
                  RowBox[{"0", " ", "+", " ", 
                   RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",",
-                  "5"}], "}"}]}], "}"}], "]"}], ",", " ", 
+                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
+                 RowBox[{"100", " ", "+", " ", "spaceY"}]}], "}"}]}], "}"}], 
+             "]"}], ",", " ", 
             RowBox[{"(*", " ", 
              RowBox[{"Braccio", " ", "sinistro"}], "*)"}], 
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -754,12 +761,13 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"{", 
                RowBox[{
-                RowBox[{"2", " ", "+", " ", 
+                RowBox[{"38", " ", "+", " ", 
                  RowBox[{"(", 
                   RowBox[{"i", "*", "spaceX"}], ")"}], "+", "offsetX"}], ",", 
-                "8.5"}], "}"}], ",", "1.4"}], "]"}]}], "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
-       "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", ")"}]}], 
+                RowBox[{"161", " ", "+", " ", "spaceY"}]}], "}"}], ",", 
+              "20.4"}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]",
+            "}"}]}], "\[IndentingNewLine]", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", "objNipoti"}], "\[IndentingNewLine]", ")"}]}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{"MONETE", " ", "NIPOTI"}], " ", "*)"}], "\[IndentingNewLine]", 
@@ -769,20 +777,9 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"spaceX", " ", "=", " ", "4.5"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"spaceXMonete", " ", "=", " ", "100"}], ";"}], 
+    RowBox[{"spaceXMonete", " ", "=", " ", "100"}], ";"}], "  ", 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"objNipoti", " ", "=", " ", 
-     RowBox[{"{", "}"}]}], ";", "    ", 
-    RowBox[{"(*", " ", 
-     RowBox[{
-     "oggetto", " ", "che", " ", "contiene", " ", "la", " ", "lista", " ", 
-      "degli", " ", "oggetti", " ", "grafici", " ", "che", " ", "compongono", 
-      " ", "il", " ", "singolo", " ", "nipote", " ", 
-      RowBox[{"(", 
-       RowBox[{"line", ",", " ", "line", ",", " ", 
-        RowBox[{"circle", " ", 
-         RowBox[{"etc", "."}]}]}], ")"}]}], "*)"}], "\[IndentingNewLine]", 
     RowBox[{"offsetX", " ", "=", " ", 
      RowBox[{"-", "15"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
@@ -808,113 +805,9 @@ Cell[BoxData[
      "*)"}], "\[IndentingNewLine]", 
     RowBox[{"raggio2", " ", "=", " ", "42"}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
-   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"For", "[", 
-       RowBox[{
-        RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
-        RowBox[{"i", "<", " ", "3"}], ",", 
-        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"AppendTo", "[", 
-         RowBox[{"objNipoti", ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Thickness", "[", ".01", "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"Line", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"0", " ", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "30"}], "}"}]}], "}"}], "]"}], ",", 
-            RowBox[{"(*", 
-             RowBox[{"Gamba", " ", "destra"}], "*)"}], "\[IndentingNewLine]", 
-            RowBox[{"Line", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "30"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"40", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "0"}], "}"}]}], "}"}], "]"}], ",", 
-            RowBox[{"(*", 
-             RowBox[{"Gamba", " ", "sinistra"}], "*)"}], 
-            "\[IndentingNewLine]", 
-            RowBox[{"Line", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", " ", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "30"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "70"}], "}"}]}], "}"}], "]"}], ",", " ", 
-            RowBox[{"(*", "Busto", "*)"}], "\[IndentingNewLine]", 
-            RowBox[{"Line", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "70"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"0", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "50"}], "}"}]}], "}"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"Line", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"20", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "70"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"40", "+", 
-                  RowBox[{"(", 
-                   RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                  "offsetX2"}], ",", "50"}], "}"}]}], "}"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"Circle", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"20", " ", "+", 
-                 RowBox[{"(", 
-                  RowBox[{"i", "*", "spaceXMonete"}], ")"}], " ", "+", " ", 
-                 "offsetX2"}], ",", "80.5"}], "}"}], ",", "1.5"}], "]"}]}], 
-           "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
-       "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
       RowBox[{"objMonete", " ", "=", " ", 
@@ -922,11 +815,11 @@ Cell[BoxData[
       "\[IndentingNewLine]", 
       RowBox[{"objNipoti", " ", "=", " ", 
        RowBox[{"getNipotiArray", "[", "3", "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"Graphics", "[", 
        RowBox[{
         RowBox[{"{", "\[IndentingNewLine]", 
-         RowBox[{"objMonete", ",", "\[IndentingNewLine]", "objNipoti"}], 
+         RowBox[{"objNipoti", ",", "\[IndentingNewLine]", "objMonete", ","}], 
          "\[IndentingNewLine]", "}"}], ",", 
         RowBox[{"ImageSize", "\[Rule]", 
          RowBox[{"{", 
@@ -1009,7 +902,11 @@ Cell[BoxData[
    3.7032468780737915`*^9}, {3.7032470880347223`*^9, 
    3.7032471172897763`*^9}, {3.7032472285135984`*^9, 
    3.7032472580557623`*^9}, {3.7032473564559507`*^9, 3.703247361983329*^9}, {
-   3.7032473953920717`*^9, 3.703247483947075*^9}}],
+   3.7032473953920717`*^9, 3.703247483947075*^9}, {3.7032478955334396`*^9, 
+   3.703247981882268*^9}, {3.7032480261774197`*^9, 3.703248027336768*^9}, 
+   3.703248092445717*^9, {3.7032481301351614`*^9, 3.7032483283770657`*^9}, {
+   3.7032483669331093`*^9, 3.7032485013469687`*^9}, {3.7032485514524207`*^9, 
+   3.703248766932807*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -1023,11 +920,11 @@ Cell[BoxData[
         Directive[
          RGBColor[1, 0, 0], Large]]}, 1, 10, 1}}, Typeset`size$$ = {
     800., {247., 253.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`numeroMonete$114010$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`numeroMonete$151040$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`numeroMonete$$ = 1}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`numeroMonete$$, $CellContext`numeroMonete$114010$$, 
+        Hold[$CellContext`numeroMonete$$, $CellContext`numeroMonete$151040$$, 
          0]}, "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1036,7 +933,7 @@ Cell[BoxData[
       "Body" :> ($CellContext`objMonete = \
 $CellContext`getMoneteArray[$CellContext`numeroMonete$$]; \
 $CellContext`objNipoti = $CellContext`getNipotiArray[3]; 
-       Graphics[{$CellContext`objMonete, $CellContext`objNipoti}, 
+       Graphics[{$CellContext`objNipoti, $CellContext`objMonete, Null}, 
          ImageSize -> {800, 500}, PlotRange -> {{-600, 600}, {-500, 500}}]), 
       "Specifications" :> {{{$CellContext`numeroMonete$$, 1, 
           Style["Numero Monete", 
@@ -1060,7 +957,12 @@ $CellContext`objNipoti = $CellContext`getNipotiArray[3];
   3.7032463853892126`*^9, 3.7032464754994936`*^9, {3.703246576777708*^9, 
    3.7032465823718896`*^9}, 3.703246677490383*^9, 3.7032467568795257`*^9, 
    3.703246842467924*^9, 3.703246887214851*^9, 3.7032470935816317`*^9, 
-   3.703247129731847*^9, 3.703247487549135*^9}]
+   3.703247129731847*^9, 3.703247487549135*^9, 3.7032478841649537`*^9, {
+   3.7032479186858807`*^9, 3.703247947728053*^9}, 3.703247986626742*^9, 
+   3.703248028048123*^9, 3.703248098957066*^9, 3.7032481602059855`*^9, {
+   3.7032482528236113`*^9, 3.703248328902277*^9}, 3.7032483676095533`*^9, 
+   3.703248414710393*^9, {3.7032484775235467`*^9, 3.7032485020704775`*^9}, {
+   3.703248588911991*^9, 3.703248767308879*^9}}]
 }, Open  ]]
 },
 WindowSize->{1366, 695},
@@ -1088,8 +990,8 @@ Cell[17054, 411, 2074, 57, 192, "Input"],
 Cell[19131, 470, 526, 10, 447, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19694, 485, 23474, 526, 1792, "Input"],
-Cell[43171, 1013, 2511, 49, 655, "Output"]
+Cell[19694, 485, 19531, 423, 1632, "Input"],
+Cell[39228, 910, 2889, 54, 655, "Output"]
 }, Open  ]]
 }
 ]
