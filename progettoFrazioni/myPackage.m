@@ -11,7 +11,11 @@ BeginPackage["ProgettoFrazioni`"]
 	getEsempioTipoFrazione::usage = "Funzione che restituisce l'esempio 1"
 	getEsempioBottiglie::usage = "Funzione che restituisce il gioco delle bottiglie"	
 	getEsempioNipoti::usage = "Funzione che restituisce il gioco delle monete"
+<<<<<<< HEAD
 	getNipotiArray::usage = "Funzione che restituisce le grafiche per disegnare i nipoti"
+=======
+	
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 
 Begin["Private`"];
 
@@ -180,7 +184,11 @@ altezzaOggetti = 90; (*altezza della bottiglia e del bicchiere*)
 larghezzaOggetti = 70;(*larghezza della bottiglia e del bicchiere*)
 altezzaColloBottiglia = 25; (*altezza del collo della bottiglia*)
 altezzaDivisorio = 60;(*altezza del divisorio tra tavoli*)
+<<<<<<< HEAD
 spaceX2 = larghezzaOggetti*2; (*distanza tra un oggetto e un altro sull'asse X*)
+=======
+spaceX = larghezzaOggetti*2; (*distanza tra un oggetto e un altro sull'asse X*)
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 stepOffsetY = altezzaOggetti*2;(*distanza tra una riga di oggetti e un'altra sull'asse Y*)
 offsetXIniziale = myPlotRange[[1]][[1]]+ larghezzaOggetti; (*padding dal confine di sinistra*)
 offsetYIniziale = myPlotRange[[2]][[2]] -(altezzaOggetti+altezzaColloBottiglia)*1.2;(*padding dal confine dal confine superiore*)
@@ -193,11 +201,19 @@ offsetX = offsetXIniziale;
 offsetY = offsetYIniziale;
 
 (*richiesta delle bottiglie da disegnare nella riga 0*)
+<<<<<<< HEAD
 objBottigliePiene = getBottiglie[offsetX,offsetY,spaceX2,numeroBottiglie,altezzaOggetti,larghezzaOggetti,altezzaColloBottiglia,True];
 
 offsetY = offsetYIniziale - 1*stepOffsetY;(*spostamento alla riga 1*)
 (*richiesta delle bottiglie da disegnare nella riga 1*)
 objBicchieriVuoti = getBicchieri[offsetX,offsetY,spaceX2,numeroBottiglie,numeroBicchieri,altezzaOggetti,larghezzaOggetti,False];
+=======
+objBottigliePiene = getBottiglie[offsetX,offsetY,spaceX,numeroBottiglie,altezzaOggetti,larghezzaOggetti,altezzaColloBottiglia,True];
+
+offsetY = offsetYIniziale - 1*stepOffsetY;(*spostamento alla riga 1*)
+(*richiesta delle bottiglie da disegnare nella riga 1*)
+objBicchieriVuoti = getBicchieri[offsetX,offsetY,spaceX,numeroBottiglie,numeroBicchieri,altezzaOggetti,larghezzaOggetti,False];
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 
 offsetY = offsetYIniziale - 2*stepOffsetY;(*spostamento alla riga 2*)
 (*richiesta delle bottiglie da disegnare nella riga 2*)
@@ -207,11 +223,19 @@ If[ numeroBicchieri>=numeroBottiglie,(*se i valori degli slider sono validi*)
 {
 offsetY = offsetYIniziale - 3*stepOffsetY;(*spostamento alla riga 3*)
 (*richiesta delle bottiglie da disegnare nella riga 3*)
+<<<<<<< HEAD
 objBottiglieVuote = getBottiglie[offsetX,offsetY,spaceX2,numeroBottiglie,altezzaOggetti,larghezzaOggetti,altezzaColloBottiglia,False];
 
 offsetY = offsetYIniziale - 4*stepOffsetY;(*spostamento alla riga 4*)
 (*richiesta delle bottiglie da disegnare nella riga 4*)
 objBicchieriPieni = getBicchieri[offsetX,offsetY,spaceX2,numeroBottiglie,numeroBicchieri,altezzaOggetti,larghezzaOggetti,True];
+=======
+objBottiglieVuote = getBottiglie[offsetX,offsetY,spaceX,numeroBottiglie,altezzaOggetti,larghezzaOggetti,altezzaColloBottiglia,False];
+
+offsetY = offsetYIniziale - 4*stepOffsetY;(*spostamento alla riga 4*)
+(*richiesta delle bottiglie da disegnare nella riga 4*)
+objBicchieriPieni = getBicchieri[offsetX,offsetY,spaceX,numeroBottiglie,numeroBicchieri,altezzaOggetti,larghezzaOggetti,True];
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 
 offsetY = offsetYIniziale - 4.5*stepOffsetY;(*spostamento alla riga 5*)
 (*richiesta delle bottiglie da disegnare nella riga 5*)
@@ -262,6 +286,7 @@ getEsempioNipoti[] := (
 	coloreNumeratore = Blue;
 	coloreDenominatore = RGBColor["#008C00"];
 	valoreNumeroMonete = 0;
+<<<<<<< HEAD
 	objNipoti = {};
 	objMonete = {};
 	objFinal1 = {};
@@ -271,6 +296,12 @@ getEsempioNipoti[] := (
 	Manipulate[
 If[ valoreNumeroMonete != numeroMonete,
 {valoreNumeroMonete = numeroMonete;
+=======
+
+	Manipulate[
+If[ valoreNumeroMonete != numeroMonete,
+valoreNumeroMonete = numeroMonete;
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 
 objMonete = getMoneteArray[numeroMonete/3];
 objFinal1 = getDivisioneMonete[numeroMonete, -700];
@@ -278,7 +309,11 @@ objFinal2 = getDivisioneMonete[numeroMonete, -200];
 objFinal3 = getDivisioneMonete[numeroMonete, 300];
 objNipoti = getNipotiArray[3];
 paghetta = numeroMonete/3;
+<<<<<<< HEAD
 }]; (*Chiusura IF*)
+=======
+]; (*Chiusura IF*)
+>>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 Graphics[{
 Text[Style["Monete del nonno",FontSize->40, Bold, Black],{-400,450}], (*Label "Monete del nonno"*)
 objNipoti,                                                                                                                                   (* Array contenente gli oggetti grafici per disegnare i nipoti*)
