@@ -552,13 +552,13 @@ getEsempioDifferenza[]:=(
 						StringForm["`` = ``   e   `` = ``",HoldForm[HoldForm[n1]/HoldForm[d1]],HoldForm[HoldForm[numS1]/HoldForm[denS1]],
 							HoldForm[HoldForm[n2]/HoldForm[d2]],HoldForm[HoldForm[numS2]/HoldForm[denS2]]]],FontSize->40]]},
 					(*sesta riga della griglia*)
-					{Text[Style["2.trovare il minimo comune multiplo (m.c.m.) tra i DENOMINATORI",FontSize->es4TextFontSize]]},
+					{Text[Style[StringForm["2.trovare il minimo comune multiplo (m.c.m.) tra i ``",Style["DENOMINATORI",es4coloreDenominatore]],FontSize->es4TextFontSize]]},
 					(*settima riga della griglia*)
 					{Text[Style[With[{n1=Style[es4numeratore1,es4coloreNumeratore],d1=Style[es4denominatore1,es4coloreDenominatore],
 						n2=Style[es4numeratore2,es4coloreNumeratore],d2=Style[es4denominatore2,es4coloreDenominatore],denS1=es4denominatoreSemplificato1,
 						denS2=es4denominatoreSemplificato2},StringForm["m.c.m.(``, ``) = ``",denS1,denS2,es4mcm]],FontSize->30]]},
 					(*ottava riga della griglia*)
-					{Text[Style["3. trovare le frazioni equivalenti che abbiano come DENOMINATORE il m.c.m.",FontSize->es4TextFontSize]]},
+					{Text[Style[StringForm["3. trovare le frazioni equivalenti che abbiano come `` il m.c.m.",Style["DENOMINATORE",es4coloreDenominatore]],FontSize->es4TextFontSize]]},
 					(*nona riga della griglia*)
 					{Text[Style[With[{n1=Style[es4numeratoreEq1,es4coloreNumeratore],n2=Style[es4numeratoreEq2,es4coloreNumeratore],
 						mcm=Style[es4mcm,es4coloreDenominatore],numS1=Style[es4numeratoreSemplificato1,es4coloreNumeratore],
@@ -571,10 +571,10 @@ getEsempioDifferenza[]:=(
 					(*undicesima riga della griglia*)
 					{Text[Style["Il risultato della somma \[EGrave] una frazione che ha:",FontSize->es4TextFontSize]]},
 					(*dodicesima riga della griglia*)
-					{Text[Style["-come NUMERATORE la differenza dei NUMERATORI delle frazioni equivalenti trovate nel punto 3;",
+					{Text[Style[StringForm["-come `` la differenza dei `` delle frazioni equivalenti trovate nel punto 3;",Style["NUMERATORE",es4coloreNumeratore],Style["NUMERATORI",es4coloreNumeratore]],
 						FontSize->es4TextFontSize]]},
 					(*tredicesima riga della griglia*)
-					{Text[Style["-come DENOMINATORE il m.c.m. trovato nel punto 2.",FontSize->es4TextFontSize]]},
+					{Text[Style[StringForm["-come `` il m.c.m. trovato nel punto 2.",Style["DENOMINATORE",es4coloreDenominatore]],FontSize->es4TextFontSize]]},
 					(*quattordicesima riga della griglia*)
 					{Text[Style[With[{n1=Style[es4numeratore1,es4coloreNumeratore],d1=Style[es4denominatore1,es4coloreDenominatore],
 						n2=Style[es4numeratore2,es4coloreNumeratore],d2=Style[es4denominatore2,es4coloreDenominatore],

@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12558,        303]
+NotebookOptionsPosition[     12177,        285]
+NotebookOutlinePosition[     12546,        301]
+CellTagsIndexPosition[     12503,        298]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\n", "\t", 
+   RowBox[{
+    RowBox[{
+    "Funzione", " ", "che", " ", "analizza", " ", "una", " ", "frazione", " ",
+      "e", " ", "restituisce", " ", "il", " ", "suo", " ", 
+     RowBox[{"tipo", ".", "\n", "\t", 
+      RowBox[{"Input", ":", " ", "numeratore_"}]}]}], ",", " ", 
+    RowBox[{"denominatore_", "\n", "\t", 
+     RowBox[{"Output", ":", " ", "\"\<frazione apparente\>\""}]}], ",", " ", 
+    "\"\<frazione propria\>\"", ",", " ", "\"\<frazione impropria\>\""}], 
+   "*)"}], "\n", "\t", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"es1getTipoFrazione", "[", 
+     RowBox[{"numeratore_", ",", "denominatore_"}], "]"}], " ", ":=", " ", 
+    RowBox[{"(", "\n", "\t", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tipo", " ", "=", " ", "\"\<frazione \>\""}], "}"}], ",", 
+       "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"numeratore", "==", "denominatore"}], " ", "||", " ", 
+           RowBox[{
+            RowBox[{"Mod", "[", 
+             RowBox[{"numeratore", ",", "denominatore"}], "]"}], "==", 
+            "0"}]}], ",", 
+          RowBox[{"tipo", " ", "=", 
+           RowBox[{"tipo", " ", "<>", "\"\<apparente\>\""}]}], ",", "\n", 
+          "\t\t\t", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"numeratore", "<", "denominatore"}], ",", 
+            RowBox[{"tipo", " ", "=", 
+             RowBox[{"tipo", " ", "<>", "\"\<propria\>\""}]}], ",", "\n", 
+            "\t\t\t\t", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"numeratore", ">", "denominatore"}], ",", 
+               RowBox[{"tipo", " ", "=", 
+                RowBox[{"tipo", " ", "<>", "\"\<impropria\>\""}]}]}], "]"}], 
+             ";"}]}], "\n", "\t\t\t", "]"}]}], "\n", "\t\t", "]"}], ";", "\n",
+         "\t\t", "tipo"}]}], "\n", "\t\t", "]"}], "\n", "\t", ")"}]}], " ", 
+   "\n", "\n", "\t", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{"Funzione", " ", "che", " ", "restituisce", " ", 
+     RowBox[{"l", "'"}], "esempio", " ", "1"}], "*)"}], "\n", "\t", 
+   RowBox[{
+    RowBox[{"getEsempioTipoFrazione", "[", "]"}], " ", ":=", " ", 
+    RowBox[{"(", "\n", "\t", 
+     RowBox[{
+      RowBox[{"es1coloreNumeratore", " ", "=", " ", "Blue"}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+       "colore", " ", "per", " ", "i", " ", "vari", " ", "numeratori"}], 
+       "*)"}], "\[IndentingNewLine]", "\t", 
+      RowBox[{"es1coloreDenominatore", " ", "=", " ", 
+       RowBox[{"RGBColor", "[", "\"\<#008C00\>\"", "]"}]}], ";", " ", 
+      RowBox[{"(*", 
+       RowBox[{
+       "colore", " ", "per", " ", "i", " ", "vari", " ", "denumeratori"}], 
+       "*)"}], "\n", "\t\t", 
+      RowBox[{"Manipulate", "[", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"Pane", "[", "\n", "\t\t\t\t", 
+         RowBox[{
+          RowBox[{"Text", "[", "\n", "\t\t\t\t\t", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"With", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"es1numeratore", "=", "es1numeratore"}], ",", 
+                  RowBox[{"es1denominatore", "=", "es1denominatore"}]}], 
+                 "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"HoldForm", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"HoldForm", "[", "es1numeratore", "]"}], ",", 
+                    RowBox[{"Directive", "[", 
+                    RowBox[{"es1coloreNumeratore", ",", "100"}], "]"}]}], 
+                   "]"}], "/", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"HoldForm", "[", "es1denominatore", "]"}], ",", 
+                    RowBox[{"Directive", "[", 
+                    RowBox[{"es1coloreDenominatore", ",", "100"}], "]"}]}], 
+                   "]"}]}], "]"}]}], "]"}], ",", "\n", "\t\t\t\t\t", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<   \[EGrave] una \>\"", ",", "20"}], "]"}], ",", 
+              " ", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"es1getTipoFrazione", "[", 
+                 RowBox[{"es1numeratore", ",", "es1denominatore"}], "]"}], 
+                ",", "30"}], "]"}]}], "}"}], "]"}], "\n", "\t\t\t\t", "]"}], 
+          ",", "\n", "\t\t\t\t", 
+          RowBox[{"{", 
+           RowBox[{"600", ",", "250"}], "}"}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{"dimensioni", " ", "pannello"}], "*)"}], "\n", "\t\t\t\t", 
+          
+          RowBox[{"Alignment", "->", "Center"}]}], "  ", 
+         RowBox[{"(*", 
+          RowBox[{
+          "allieneamento", " ", "centrale", " ", "degli", " ", "elementi", 
+           " ", "contenuti"}], "*)"}], "\n", "\t\t\t", "]"}], ",", "\n", 
+        "\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"es1numeratore", ",", "\n", "\t\t\t\t", "1", ",", 
+            RowBox[{"(*", 
+             RowBox[{
+             "valore", " ", "iniziale", " ", "slider", " ", "numeratore"}], 
+             "*)"}], "\n", "\t\t\t\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<Numeratore\>\"", ",", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"es1coloreNumeratore", ",", "Large"}], "]"}]}], 
+             "]"}]}], "\n", "\t\t\t\t", "}"}], ",", "\n", "\t\t\t\t", "1", 
+          ",", "100", ",", "1", ",", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"valore", " ", "iniziale"}], ",", " ", 
+            RowBox[{"valore", " ", "finale"}], ",", " ", 
+            RowBox[{"step", " ", "di", " ", 
+             RowBox[{"incremento", "/", "decremento"}], " ", "slider"}]}], 
+           "*)"}], "\n", "\t\t\t\t", 
+          RowBox[{"Appearance", "->", 
+           RowBox[{"{", "\"\<Labeled\>\"", "}"}]}], ",", "\n", "\t\t\t\t", 
+          RowBox[{"AppearanceElements", "->", 
+           RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", "\n", "\t\t\t\t", 
+          
+          RowBox[{"LabelStyle", "->", 
+           RowBox[{"Directive", "[", 
+            RowBox[{"es1coloreNumeratore", ",", "Large"}], "]"}]}], ",", "\n",
+           "\t\t\t\t", 
+          RowBox[{"ImageSize", "->", "400"}]}], "\n", "\t\t\t", "}"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", "fine"}], " ", "slider", " ", "numeratore"}], "*)"}], 
+        "\n", "\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"es1denominatore", ",", "10", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<Denominatore\>\"", ",", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"es1coloreDenominatore", ",", "Large"}], "]"}]}], 
+             "]"}]}], "}"}], ",", "1", ",", "100", ",", "1", ",", "\n", 
+          "\t\t\t\t", 
+          RowBox[{"Appearance", "->", 
+           RowBox[{"{", "\"\<Labeled\>\"", "}"}]}], ",", "\n", "\t\t\t\t", 
+          RowBox[{"AppearanceElements", "->", 
+           RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+          RowBox[{"(*", 
+           RowBox[{"rimuovo", " ", "tutto", " ", "tranne", " ", 
+            RowBox[{"l", "'"}], "inputField"}], "*)"}], "\n", "\t\t\t\t", 
+          RowBox[{"LabelStyle", "->", 
+           RowBox[{"Directive", "[", 
+            RowBox[{"es1coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+          RowBox[{"ImageSize", "->", "400"}]}], "}"}]}], "\n", "\t\t\t", 
+       "]"}]}], "\n", "\t", ")"}]}]}]}]], "Code",
+ CellChangeTimes->{{3.703675214169799*^9, 3.703675261978945*^9}, {
+  3.703675302566712*^9, 3.703675358453388*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"getEsempioTipoFrazione", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.703675164007236*^9, 3.7036751668657007`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`es1denominatore$$ = 
+      1, $CellContext`es1numeratore$$ = 1, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`es1numeratore$$], 1, 
+         Style["Numeratore", 
+          Directive[
+           RGBColor[0, 0, 1], Large]]}, 1, 100, 1}, {{
+         Hold[$CellContext`es1denominatore$$], 10, 
+         Style["Denominatore", 
+          Directive[
+           RGBColor[0., 0.5490196078431373, 0.], Large]]}, 1, 100, 1}}, 
+      Typeset`size$$ = {750., {152.5, 160.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`es1numeratore$5369$$ = 
+      0, $CellContext`es1denominatore$5370$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`es1denominatore$$ = 
+          10, $CellContext`es1numeratore$$ = 1}, "ControllerVariables" :> {
+          
+          Hold[$CellContext`es1numeratore$$, \
+$CellContext`es1numeratore$5369$$, 0], 
+          
+          Hold[$CellContext`es1denominatore$$, \
+$CellContext`es1denominatore$5370$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Pane[
+          Text[
+           Row[{
+             
+             With[{$CellContext`es1numeratore = $CellContext`es1numeratore$$, \
+$CellContext`es1denominatore = $CellContext`es1denominatore$$}, 
+              HoldForm[Style[
+                 HoldForm[$CellContext`es1numeratore], 
+                 Directive[$CellContext`es1coloreNumeratore, 100]]/Style[
+                HoldForm[$CellContext`es1denominatore], 
+                Directive[$CellContext`es1coloreDenominatore, 100]]]], 
+             Style["   \[EGrave] una ", 20], 
+             Style[
+              $CellContext`es1getTipoFrazione[$CellContext`es1numeratore$$, \
+$CellContext`es1denominatore$$], 30]}]], {600, 250}, Alignment -> Center], 
+        "Specifications" :> {{{$CellContext`es1numeratore$$, 1, 
+            Style["Numeratore", 
+             Directive[
+              RGBColor[0, 0, 1], Large]]}, 1, 100, 1, 
+           Appearance -> {"Labeled"}, AppearanceElements -> {"InputField"}, 
+           LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 
+           400}, {{$CellContext`es1denominatore$$, 10, 
+            Style["Denominatore", 
+             Directive[
+              RGBColor[0., 0.5490196078431373, 0.], Large]]}, 1, 100, 1, 
+           Appearance -> {"Labeled"}, AppearanceElements -> {"InputField"}, 
+           LabelStyle -> Directive[
+             RGBColor[0., 0.5490196078431373, 0.], Large], ImageSize -> 400}},
+         "Options" :> {}, "DefaultOptions" :> {}],
+       ImageSizeCache->{894., {235., 243.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.703675168487376*^9, 3.703675171611047*^9}, 
+   3.703675369075688*^9}]
+}, Open  ]]
+},
+WindowSize->{1920, 1009},
+WindowMargins->{{556, Automatic}, {-84, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7749, 175, 1148, "Code"],
+Cell[CellGroupData[{
+Cell[8332, 199, 138, 2, 40, "Input"],
+Cell[8473, 203, 3688, 79, 531, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -11,11 +11,7 @@ BeginPackage["ProgettoFrazioni`"]
 	getEsempioTipoFrazione::usage = "Funzione che restituisce l'esempio 1"
 	getEsempioBottiglie::usage = "Funzione che restituisce il gioco delle bottiglie"	
 	getEsempioNipoti::usage = "Funzione che restituisce il gioco delle monete"
-<<<<<<< HEAD
 	getNipotiArray::usage = "Funzione che restituisce le grafiche per disegnare i nipoti"
-=======
-	
->>>>>>> ad521cfd24eaaec0f2ab2dd880f76eda939624f0
 
 Begin["Private`"];
 
