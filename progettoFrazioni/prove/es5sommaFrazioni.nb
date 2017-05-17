@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     45456,        981]
-NotebookOptionsPosition[     45104,        964]
-NotebookOutlinePosition[     45438,        979]
-CellTagsIndexPosition[     45395,        976]
+NotebookDataLength[     40786,        869]
+NotebookOptionsPosition[     40434,        852]
+NotebookOutlinePosition[     40768,        867]
+CellTagsIndexPosition[     40725,        864]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -88,59 +88,122 @@ Cell[BoxData[
            "es5numeratoreSemplificato2"}], ")"}]}], ";", "\n", "\t\t", 
         RowBox[{"es5numeratoreSomma", " ", "=", " ", 
          RowBox[{"es5numeratoreEq1", " ", "+", " ", "es5numeratoreEq2"}]}], 
-        ";", "\n", "\t\t", 
+        ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+        RowBox[{"es5numeratoreSemplificatoSomma", "=", " ", 
+         RowBox[{"Numerator", "[", 
+          RowBox[{"es5numeratoreSomma", "/", "es5mcm"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\t", 
+        RowBox[{"es5denominatoreSemplificatoSomma", " ", "=", " ", 
+         RowBox[{"Denominator", "[", 
+          RowBox[{"es5numeratoreSomma", "/", "es5mcm"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\n", "\t\t", 
         RowBox[{"es5TextFontSize", " ", "=", " ", "15"}], ";", "\n", "\t\t", 
+        RowBox[{"es5FractionsFontSize", " ", "=", " ", "40"}], ";", 
+        "\[IndentingNewLine]", "\n", "\t\t", 
         RowBox[{"Pane", "[", 
          RowBox[{"(*", 
-          RowBox[{"interfaccia", " ", "a", " ", "finestra"}], "*)"}], "\n", 
-         "\t\t\t", 
+          RowBox[{"interfaccia", " ", "a", " ", "finestra"}], "*)"}], 
+         "\[IndentingNewLine]", "\t\t", 
          RowBox[{
-          RowBox[{"Grid", "[", 
+          RowBox[{"With", "[", 
            RowBox[{"(*", 
             RowBox[{
-            "gliglia", " ", "14", "x1", " ", "per", " ", "organizzare", " ", 
-             "il", " ", "testo"}], "*)"}], "\n", "\t\t\t\t", 
+            "specifica", " ", "delle", " ", "occorrenze", " ", "per", " ", 
+             "le", " ", "variabili", " ", "da", " ", "stampare"}], "*)"}], 
+           "\[IndentingNewLine]", "\t\t", 
            RowBox[{
-            RowBox[{"{", "\n", "\t\t\t\t\t", 
-             RowBox[{"(*", 
-              RowBox[{"prima", " ", "riga", " ", "della", " ", "griglia"}], 
-              "*)"}], "\n", "\t\t\t\t\t", 
+            RowBox[{"{", 
              RowBox[{
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{"\"\<Se vogliamo calcolare: \>\"", ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"seconda", " ", "riga", " ", "della", " ", "griglia"}],
+              RowBox[{"n1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5numeratore1", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", 
+              RowBox[{"d1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5denominatore1", ",", "es5coloreDenominatore"}], 
+                "]"}]}], ",", "\n", "\t\t\t\t", 
+              RowBox[{"n2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5numeratore2", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", 
+              RowBox[{"d2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5denominatore2", ",", "es5coloreDenominatore"}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              RowBox[{"numS1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5numeratoreSemplificato1", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", 
+              RowBox[{"numS2", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5numeratoreSemplificato2", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              RowBox[{"denS1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5denominatoreSemplificato1", ",", 
+                 "es5coloreDenominatore"}], "]"}]}], ",", 
+              RowBox[{"denS2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5denominatoreSemplificato2", ",", 
+                 "es5coloreDenominatore"}], "]"}]}], ",", "\n", "\t\t\t\t", 
+              RowBox[{"nEq1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5numeratoreEq1", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", 
+              RowBox[{"mcm", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5mcm", ",", "es5coloreDenominatore"}], "]"}]}], 
+              ",", "\n", "\t\t\t\t", 
+              RowBox[{"nEq2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es5numeratoreEq2", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", 
+              RowBox[{"nSom", " ", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5numeratoreSomma", " ", ",", "es5coloreNumeratore"}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t", 
+              RowBox[{"numSS", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5numeratoreSemplificatoSomma", ",", 
+                 "es5coloreNumeratore"}], "]"}]}], ",", 
+              RowBox[{"denSS", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es5denominatoreSemplificatoSomma", ",", 
+                 "es5coloreDenominatore"}], "]"}]}]}], "}"}], ",", "\n", 
+            "\t\t\t", 
+            RowBox[{"Grid", "[", 
+             RowBox[{"(*", 
+              RowBox[{
+              "gliglia", " ", "13", "x1", " ", "per", " ", "organizzare", " ",
+                "il", " ", "testo", " ", "in", " ", "righe"}], "*)"}], "\n", 
+             "\t\t\t\t", 
+             RowBox[{
+              RowBox[{"{", "\n", "\t\t\t\t\t", 
+               RowBox[{"(*", 
+                RowBox[{"prima", " ", "riga", " ", "della", " ", "griglia"}], 
                 "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<Se vogliamo calcolare: \>\"", ",", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
                  RowBox[{
-                  RowBox[{"With", "[", 
+                 "seconda", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"n1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore1", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"n2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore2", ",", "es5coloreDenominatore"}], 
-                    "]"}]}]}], "}"}], ",", "\n", "\t\t\t\t\t\t", 
                     RowBox[{"StringForm", "[", 
                     RowBox[{"\"\<`` + ``\>\"", ",", 
                     RowBox[{"HoldForm", "[", 
@@ -150,83 +213,44 @@ Cell[BoxData[
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "n2", "]"}], "/", 
-                    RowBox[{"HoldForm", "[", "d2", "]"}]}], "]"}]}], "]"}]}], 
-                   "]"}], ",", 
-                  RowBox[{"FontSize", "->", "40"}]}], "]"}], "]"}], "}"}], 
-              ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"terza", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<dobbiamo svolgere i seguenti passaggi:\>\"", ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"quarta", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<1. ridurre ogni frazione ai minimi termini\>\"", ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"quinta", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                  RowBox[{"With", "[", 
+                    RowBox[{"HoldForm", "[", "d2", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es5FractionsFontSize"}]}], 
+                   "]"}], "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{"terza", " ", "riga", " ", "della", " ", "griglia"}],
+                  "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"n1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore1", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"n2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore2", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"numS1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5numeratoreSemplificato1", ",", 
-                    "es5coloreNumeratore"}], "]"}]}], ",", 
-                    RowBox[{"denS1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatoreSemplificato1", ",", 
-                    "es5coloreDenominatore"}], "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
-                    RowBox[{"numS2", " ", "=", " ", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5numeratoreSemplificato2", ",", 
-                    "es5coloreNumeratore"}], "]"}]}], ",", 
-                    RowBox[{"denS2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatoreSemplificato2", ",", 
-                    "es5coloreDenominatore"}], "]"}]}]}], "}"}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                   "\"\<dobbiamo svolgere i seguenti passaggi:\>\"", ",", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{
+                 "quarta", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<1. Ridurre ogni frazione ai minimi termini\>\"", ",", 
+                    
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{
+                 "quinta", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
                     RowBox[{"StringForm", "[", 
-                    RowBox[{"\"\<`` = ``   e   `` = ``\>\"", ",", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] ``   e   `` \[LeftRightArrow] \
+``\>\"", ",", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "n1", "]"}], "/", 
@@ -243,131 +267,70 @@ Cell[BoxData[
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "numS2", "]"}], "/", 
-                    RowBox[{"HoldForm", "[", "denS2", "]"}]}], "]"}]}], 
-                    "]"}]}], "]"}], ",", 
-                  RowBox[{"FontSize", "->", "40"}]}], "]"}], "]"}], "}"}], 
-              ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"sesta", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                  RowBox[{"StringForm", "[", 
+                    RowBox[{"HoldForm", "[", "denS2", "]"}]}], "]"}]}], "]"}],
+                     ",", 
+                    RowBox[{"FontSize", "->", "es5FractionsFontSize"}]}], 
+                   "]"}], "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{"sesta", " ", "riga", " ", "della", " ", "griglia"}],
+                  "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                   "\"\<2.trovare il minimo comune multiplo (m.c.m.) tra i ``\
-\>\"", ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<2.Trovare il minimo comune multiplo (m.c.m.) tra i \
+``\>\"", ",", 
                     RowBox[{"Style", "[", 
                     RowBox[{
                     "\"\<DENOMINATORI\>\"", ",", "es5coloreDenominatore"}], 
                     "]"}]}], "]"}], ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"settima", " ", "riga", " ", "della", " ", "griglia"}],
-                "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
                  RowBox[{
-                  RowBox[{"With", "[", 
+                 "settima", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"n1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore1", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"n2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore2", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"denS1", "=", "es5denominatoreSemplificato1"}], 
-                    ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"denS2", "=", "es5denominatoreSemplificato2"}]}], 
-                    "}"}], ",", 
                     RowBox[{"StringForm", "[", 
                     RowBox[{
                     "\"\<m.c.m.(``, ``) = ``\>\"", ",", "denS1", ",", "denS2",
-                     ",", "es5mcm"}], "]"}]}], "]"}], ",", 
-                  RowBox[{"FontSize", "->", "30"}]}], "]"}], "]"}], "}"}], 
-              ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"ottava", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
+                     ",", "mcm"}], "]"}], ",", 
+                    RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], "]"}], 
+                 "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
                  RowBox[{
-                  RowBox[{"StringForm", "[", 
+                 "ottava", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                   "\"\<3. trovare le frazioni equivalenti che abbiano come \
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<3. Trovare le frazioni equivalenti che abbiano come \
 `` il m.c.m.\>\"", ",", 
                     RowBox[{"Style", "[", 
                     RowBox[{
                     "\"\<DENOMINATORE\>\"", ",", "es5coloreDenominatore"}], 
                     "]"}]}], "]"}], ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"nona", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                  RowBox[{"With", "[", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{"nona", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"n1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratoreEq1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"n2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratoreEq2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"mcm", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5mcm", ",", "es5coloreDenominatore"}], "]"}]}],
-                     ",", 
-                    RowBox[{"numS1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5numeratoreSemplificato1", ",", 
-                    "es5coloreNumeratore"}], "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
-                    RowBox[{"denS1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatoreSemplificato1", ",", 
-                    "es5coloreDenominatore"}], "]"}]}], ",", 
-                    RowBox[{"numS2", " ", "=", " ", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5numeratoreSemplificato2", ",", 
-                    "es5coloreNumeratore"}], "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
-                    RowBox[{"denS2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatoreSemplificato2", ",", 
-                    "es5coloreDenominatore"}], "]"}]}]}], "}"}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
                     RowBox[{"StringForm", "[", 
-                    RowBox[{"\"\<`` = ``   e   `` = ``\>\"", ",", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] ``   e   `` \[LeftRightArrow] \
+``\>\"", ",", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "numS1", "]"}], "/", 
@@ -384,118 +347,29 @@ Cell[BoxData[
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "n2", "]"}], "/", 
-                    RowBox[{"HoldForm", "[", "mcm", "]"}]}], "]"}]}], "]"}]}],
-                    "]"}], ",", 
-                  RowBox[{"FontSize", "->", "40"}]}], "]"}], "]"}], "}"}], 
-              ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{"decima", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
+                    RowBox[{"HoldForm", "[", "mcm", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es5FractionsFontSize"}]}], 
+                   "]"}], "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
                  RowBox[{
-                 "\"\<4. Ora sei pronto per calcolare la somma!\>\"", ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{
-               "undicesima", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<Il risultato della somma \[EGrave] una frazione che ha:\
-\>\"", ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{
-               "dodicesima", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                  RowBox[{"StringForm", "[", 
+                 "decima", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                   "\"\<-come `` la somma dei `` delle frazioni equivalenti \
-trovate nel punto 3;\>\"", ",", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "\"\<NUMERATORE\>\"", ",", "es5coloreNumeratore"}], "]"}],
-                     ",", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "\"\<NUMERATORI\>\"", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], "]"}], ",", "\n", "\t\t\t\t\t\t", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{
-               "tredicesima", " ", "riga", " ", "della", " ", "griglia"}], 
-               "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
+                   "\"\<4. Ora sei pronto per calcolare la somma!\>\"", ",", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
                  RowBox[{
-                  RowBox[{"StringForm", "[", 
+                 "undicesima", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
                    RowBox[{
-                   "\"\<-come `` il m.c.m. trovato nel punto 2.\>\"", ",", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "\"\<DENOMINATORE\>\"", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], "]"}], ",", 
-                  RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
-                "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
-              RowBox[{"(*", 
-               RowBox[{
-               "quattordicesima", " ", "riga", " ", "della", " ", "griglia"}],
-                "*)"}], "\n", "\t\t\t\t\t", 
-              RowBox[{"{", 
-               RowBox[{"Text", "[", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                  RowBox[{"With", "[", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"n1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore1", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"n2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratore2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"d2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5denominatore2", ",", "es5coloreDenominatore"}], 
-                    "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"nEq1", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratoreEq1", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"mcm", " ", "=", " ", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5mcm", ",", "es5coloreDenominatore"}], "]"}]}],
-                     ",", "\n", "\t\t\t\t\t\t", 
-                    RowBox[{"nEq2", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{"es5numeratoreEq2", ",", "es5coloreNumeratore"}], 
-                    "]"}]}], ",", 
-                    RowBox[{"nSot", " ", "=", 
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "es5numeratoreSomma", " ", ",", "es5coloreNumeratore"}], 
-                    "]"}]}]}], "}"}], ",", "\n", "\t\t\t\t\t\t", 
                     RowBox[{"StringForm", "[", 
                     RowBox[{"\"\<`` + ``  =  `` + ``  = ``  =  ``\>\"", ",", 
                     RowBox[{"HoldForm", "[", 
@@ -523,19 +397,51 @@ trovate nel punto 3;\>\"", ",",
                      "\t\t\t\t\t\t\t", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
-                    RowBox[{"HoldForm", "[", "nSot", "]"}], "/", 
-                    RowBox[{"HoldForm", "[", "mcm", "]"}]}], "]"}]}], "]"}]}],
-                    "]"}], ",", 
-                  RowBox[{"FontSize", "->", "40"}]}], "]"}], "]"}], "}"}]}], 
-             "\n", "\t\t\t\t", "}"}], "\n", "\t\t\t\t", ",", 
-            RowBox[{"Alignment", "->", 
-             RowBox[{"{", "Left", "}"}]}]}], "\n", "\t\t\t", "]"}], ",", "\n",
-           "\t\t\t", 
+                    RowBox[{"HoldForm", "[", "nSom", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "mcm", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es5FractionsFontSize"}]}], 
+                   "]"}], "]"}], "}"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+                
+                RowBox[{"(*", 
+                 RowBox[{
+                 "dodicesima", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<5. Nel caso fosse necessario ridurre ai minimi \
+termini il risultato.\>\"", ",", 
+                    RowBox[{"FontSize", "->", "es5TextFontSize"}]}], "]"}], 
+                  "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                RowBox[{"(*", 
+                 RowBox[{
+                 "tredicesima", " ", "riga", " ", "della", " ", "griglia"}], 
+                 "*)"}], "\n", "\t\t\t\t\t", 
+                RowBox[{"{", 
+                 RowBox[{"Text", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`` = ``\>\"", ",", " ", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "nSom", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "mcm", "]"}]}], "]"}], ",", 
+                    RowBox[{"numSS", "/", "denSS"}]}], "]"}], ",", 
+                    RowBox[{"FontSize", "->", "es5FractionsFontSize"}]}], 
+                   "]"}], "]"}], "}"}]}], "\[IndentingNewLine]", "\t\t", 
+               "}"}], ",", 
+              RowBox[{"Alignment", "->", 
+               RowBox[{"{", "Left", "}"}]}]}], "\n", "\t\t\t", "]"}]}], 
+           "\[IndentingNewLine]", "\t", "]"}], ",", 
           RowBox[{"{", 
-           RowBox[{"1000", ",", "550"}], "}"}]}], 
+           RowBox[{"1000", ",", "600"}], "}"}]}], 
          RowBox[{"(*", 
           RowBox[{"dimensioni", " ", "pannello", " ", "\"\<pane\>\""}], 
-          "*)"}], "\n", "\t\t", "]"}]}], ",", "\t", "\n", "\t\t", 
+          "*)"}], "\t", "\[IndentingNewLine]", "]"}]}], ",", "\t", "\n", 
+       "\t\t", 
        RowBox[{"{", 
         RowBox[{"(*", 
          RowBox[{"paramentri", " ", "primo", " ", "slider"}], "*)"}], "\n", 
@@ -653,7 +559,23 @@ trovate nel punto 3;\>\"", ",",
    3.70384660741893*^9}, {3.703846651776449*^9, 3.70384667108842*^9}, {
    3.7038467022535067`*^9, 3.7038468330836363`*^9}, {3.703846871335919*^9, 
    3.703846871975699*^9}, {3.703846980953897*^9, 3.703847035675108*^9}, {
-   3.703847090622674*^9, 3.7038471322558813`*^9}, 3.703847230136301*^9}],
+   3.703847090622674*^9, 3.7038471322558813`*^9}, 3.703847230136301*^9, {
+   3.7039958728688173`*^9, 3.7039959114237137`*^9}, {3.7039959459969263`*^9, 
+   3.703995972251524*^9}, {3.703996003228677*^9, 3.703996053030497*^9}, {
+   3.703996327454556*^9, 3.703996338030347*^9}, {3.703996509217772*^9, 
+   3.7039965362477417`*^9}, {3.703996615347042*^9, 3.703996621695825*^9}, 
+   3.7039966650428534`*^9, {3.703996748609404*^9, 3.70399682201823*^9}, {
+   3.703996907467239*^9, 3.7039970136660013`*^9}, 3.703997046061221*^9, {
+   3.703997262193493*^9, 3.703997580081118*^9}, {3.703997619363941*^9, 
+   3.7039976587375393`*^9}, 3.703997707697569*^9, {3.703997815041523*^9, 
+   3.7039978156987343`*^9}, {3.703997919862211*^9, 3.703997936413035*^9}, {
+   3.703998025794168*^9, 3.703998140250471*^9}, {3.703998238611648*^9, 
+   3.7039983062870483`*^9}, 3.703998340079603*^9, {3.70399865954213*^9, 
+   3.70399878249781*^9}, {3.703998873256784*^9, 3.703998903712203*^9}, {
+   3.7039989382676983`*^9, 3.703998949972934*^9}, {3.704000414103211*^9, 
+   3.704000449654531*^9}, {3.7040038642418623`*^9, 3.704003902138129*^9}, {
+   3.7040041466140738`*^9, 3.704004238970347*^9}, {3.704004315875321*^9, 
+   3.704004321407064*^9}}],
 
 Cell[CellGroupData[{
 
@@ -668,7 +590,7 @@ Cell[BoxData[
     StyleBox[
      DynamicModuleBox[{$CellContext`es5denominatore1$$ = 
       20, $CellContext`es5denominatore2$$ = 6, $CellContext`es5numeratore1$$ =
-       8, $CellContext`es5numeratore2$$ = 9, Typeset`show$$ = True, 
+       30, $CellContext`es5numeratore2$$ = 9, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{{
@@ -688,12 +610,12 @@ Cell[BoxData[
          Style["denominatore seconda frazione", 
           Directive[
            RGBColor[0., 0.5490196078431373, 0.], Large]]}, 1, 100, 1}}, 
-      Typeset`size$$ = {1000., {272., 278.}}, Typeset`update$$ = 0, 
+      Typeset`size$$ = {1000., {297., 303.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`es5numeratore1$3371$$ = 
-      0, $CellContext`es5denominatore1$3372$$ = 
-      0, $CellContext`es5numeratore2$3373$$ = 
-      0, $CellContext`es5denominatore2$3374$$ = 0}, 
+      True, $CellContext`es5numeratore1$853$$ = 
+      0, $CellContext`es5denominatore1$854$$ = 
+      0, $CellContext`es5numeratore2$855$$ = 
+      0, $CellContext`es5denominatore2$856$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`es5denominatore1$$ = 
@@ -702,16 +624,16 @@ Cell[BoxData[
           9}, "ControllerVariables" :> {
           
           Hold[$CellContext`es5numeratore1$$, \
-$CellContext`es5numeratore1$3371$$, 0], 
+$CellContext`es5numeratore1$853$$, 0], 
           
           Hold[$CellContext`es5denominatore1$$, \
-$CellContext`es5denominatore1$3372$$, 0], 
+$CellContext`es5denominatore1$854$$, 0], 
           
           Hold[$CellContext`es5numeratore2$$, \
-$CellContext`es5numeratore2$3373$$, 0], 
+$CellContext`es5numeratore2$855$$, 0], 
           
           Hold[$CellContext`es5denominatore2$$, \
-$CellContext`es5denominatore2$3374$$, 0]}, 
+$CellContext`es5denominatore2$856$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -737,59 +659,67 @@ $CellContext`es5numeratoreSemplificato1; $CellContext`es5numeratoreEq2 = \
 ($CellContext`es5mcm/$CellContext`es5denominatoreSemplificato2) \
 $CellContext`es5numeratoreSemplificato2; $CellContext`es5numeratoreSomma = \
 $CellContext`es5numeratoreEq1 + $CellContext`es5numeratoreEq2; \
-$CellContext`es5TextFontSize = 15; Pane[
-           Grid[{{
-              Text[
-               Style[
-               "Se vogliamo calcolare: ", 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                
-                With[{$CellContext`n1 = 
-                  Style[$CellContext`es5numeratore1$$, \
+$CellContext`es5numeratoreSemplificatoSomma = 
+          Numerator[$CellContext`es5numeratoreSomma/$CellContext`es5mcm]; \
+$CellContext`es5denominatoreSemplificatoSomma = 
+          Denominator[$CellContext`es5numeratoreSomma/$CellContext`es5mcm]; \
+$CellContext`es5TextFontSize = 15; $CellContext`es5FractionsFontSize = 40; 
+         Pane[
+           
+           With[{$CellContext`n1 = 
+             Style[$CellContext`es5numeratore1$$, \
 $CellContext`es5coloreNumeratore], $CellContext`d1 = 
-                  Style[$CellContext`es5denominatore1$$, \
+             Style[$CellContext`es5denominatore1$$, \
 $CellContext`es5coloreDenominatore], $CellContext`n2 = 
-                  Style[$CellContext`es5numeratore2$$, \
+             Style[$CellContext`es5numeratore2$$, \
 $CellContext`es5coloreNumeratore], $CellContext`d2 = 
-                  Style[$CellContext`es5denominatore2$$, \
+             Style[$CellContext`es5denominatore2$$, \
+$CellContext`es5coloreDenominatore], $CellContext`numS1 = 
+             Style[$CellContext`es5numeratoreSemplificato1, \
+$CellContext`es5coloreNumeratore], $CellContext`numS2 = 
+             Style[$CellContext`es5numeratoreSemplificato2, \
+$CellContext`es5coloreNumeratore], $CellContext`denS1 = 
+             Style[$CellContext`es5denominatoreSemplificato1, \
+$CellContext`es5coloreDenominatore], $CellContext`denS2 = 
+             Style[$CellContext`es5denominatoreSemplificato2, \
+$CellContext`es5coloreDenominatore], $CellContext`nEq1 = 
+             Style[$CellContext`es5numeratoreEq1, \
+$CellContext`es5coloreNumeratore], $CellContext`mcm = 
+             Style[$CellContext`es5mcm, $CellContext`es5coloreDenominatore], \
+$CellContext`nEq2 = 
+             Style[$CellContext`es5numeratoreEq2, \
+$CellContext`es5coloreNumeratore], $CellContext`nSom = 
+             Style[$CellContext`es5numeratoreSomma, \
+$CellContext`es5coloreNumeratore], $CellContext`numSS = 
+             Style[$CellContext`es5numeratoreSemplificatoSomma, \
+$CellContext`es5coloreNumeratore], $CellContext`denSS = 
+             Style[$CellContext`es5denominatoreSemplificatoSomma, \
 $CellContext`es5coloreDenominatore]}, 
+            Grid[{{
+               Text[
+                Style[
+                "Se vogliamo calcolare: ", 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
                  StringForm["`` + ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
                   HoldForm[
-                  HoldForm[$CellContext`n2]/HoldForm[$CellContext`d2]]]], 
-                FontSize -> 40]]}, {
-              Text[
-               Style[
-               "dobbiamo svolgere i seguenti passaggi:", 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-               "1. ridurre ogni frazione ai minimi termini", 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                
-                With[{$CellContext`n1 = 
-                  Style[$CellContext`es5numeratore1$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d1 = 
-                  Style[$CellContext`es5denominatore1$$, \
-$CellContext`es5coloreDenominatore], $CellContext`n2 = 
-                  Style[$CellContext`es5numeratore2$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d2 = 
-                  Style[$CellContext`es5denominatore2$$, \
-$CellContext`es5coloreDenominatore], $CellContext`numS1 = 
-                  Style[$CellContext`es5numeratoreSemplificato1, \
-$CellContext`es5coloreNumeratore], $CellContext`denS1 = 
-                  Style[$CellContext`es5denominatoreSemplificato1, \
-$CellContext`es5coloreDenominatore], $CellContext`numS2 = 
-                  Style[$CellContext`es5numeratoreSemplificato2, \
-$CellContext`es5coloreNumeratore], $CellContext`denS2 = 
-                  Style[$CellContext`es5denominatoreSemplificato2, \
-$CellContext`es5coloreDenominatore]}, 
-                 StringForm["`` = ``   e   `` = ``", 
+                  HoldForm[$CellContext`n2]/HoldForm[$CellContext`d2]]], 
+                 FontSize -> $CellContext`es5FractionsFontSize]]}, {
+               Text[
+                Style[
+                "dobbiamo svolgere i seguenti passaggi:", 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
+                "1. Ridurre ogni frazione ai minimi termini", 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
+                 StringForm[
+                 "`` \[LeftRightArrow] ``   e   `` \[LeftRightArrow] ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
                   HoldForm[
@@ -798,58 +728,30 @@ $CellContext`es5coloreDenominatore]},
                   HoldForm[
                   HoldForm[$CellContext`n2]/HoldForm[$CellContext`d2]], 
                   HoldForm[
-                  HoldForm[$CellContext`numS2]/
-                   HoldForm[$CellContext`denS2]]]], FontSize -> 40]]}, {
-              Text[
-               Style[
-                StringForm[
-                "2.trovare il minimo comune multiplo (m.c.m.) tra i ``", 
-                 Style["DENOMINATORI", $CellContext`es5coloreDenominatore]], 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                
-                With[{$CellContext`n1 = 
-                  Style[$CellContext`es5numeratore1$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d1 = 
-                  Style[$CellContext`es5denominatore1$$, \
-$CellContext`es5coloreDenominatore], $CellContext`n2 = 
-                  Style[$CellContext`es5numeratore2$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d2 = 
-                  Style[$CellContext`es5denominatore2$$, \
-$CellContext`es5coloreDenominatore], $CellContext`denS1 = \
-$CellContext`es5denominatoreSemplificato1, $CellContext`denS2 = \
-$CellContext`es5denominatoreSemplificato2}, 
+                  HoldForm[$CellContext`numS2]/HoldForm[$CellContext`denS2]]],
+                  FontSize -> $CellContext`es5FractionsFontSize]]}, {
+               Text[
+                Style[
+                 StringForm[
+                 "2.Trovare il minimo comune multiplo (m.c.m.) tra i ``", 
+                  Style["DENOMINATORI", $CellContext`es5coloreDenominatore]], 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
                  StringForm[
                  "m.c.m.(``, ``) = ``", $CellContext`denS1, \
-$CellContext`denS2, $CellContext`es5mcm]], FontSize -> 30]]}, {
-              Text[
-               Style[
-                StringForm[
-                "3. trovare le frazioni equivalenti che abbiano come `` il \
+$CellContext`denS2, $CellContext`mcm], FontSize -> 20]]}, {
+               Text[
+                Style[
+                 StringForm[
+                 "3. Trovare le frazioni equivalenti che abbiano come `` il \
 m.c.m.", 
-                 Style["DENOMINATORE", $CellContext`es5coloreDenominatore]], 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                
-                With[{$CellContext`n1 = 
-                  Style[$CellContext`es5numeratoreEq1, \
-$CellContext`es5coloreNumeratore], $CellContext`n2 = 
-                  Style[$CellContext`es5numeratoreEq2, \
-$CellContext`es5coloreNumeratore], $CellContext`mcm = 
-                  Style[$CellContext`es5mcm, \
-$CellContext`es5coloreDenominatore], $CellContext`numS1 = 
-                  Style[$CellContext`es5numeratoreSemplificato1, \
-$CellContext`es5coloreNumeratore], $CellContext`denS1 = 
-                  
-                  Style[$CellContext`es5denominatoreSemplificato1, \
-$CellContext`es5coloreDenominatore], $CellContext`numS2 = 
-                  Style[$CellContext`es5numeratoreSemplificato2, \
-$CellContext`es5coloreNumeratore], $CellContext`denS2 = 
-                  Style[$CellContext`es5denominatoreSemplificato2, \
-$CellContext`es5coloreDenominatore]}, 
-                 StringForm["`` = ``   e   `` = ``", 
+                  Style["DENOMINATORE", $CellContext`es5coloreDenominatore]], 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
+                 StringForm[
+                 "`` \[LeftRightArrow] ``   e   `` \[LeftRightArrow] ``", 
                   HoldForm[
                   HoldForm[$CellContext`numS1]/HoldForm[$CellContext`denS1]], 
                   
@@ -859,49 +761,14 @@ $CellContext`es5coloreDenominatore]},
                   HoldForm[$CellContext`numS2]/HoldForm[$CellContext`denS2]], 
                   
                   HoldForm[
-                  HoldForm[$CellContext`n2]/HoldForm[$CellContext`mcm]]]], 
-                FontSize -> 40]]}, {
-              Text[
-               Style[
-               "4. Ora sei pronto per calcolare la somma!", 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-               "Il risultato della somma \[EGrave] una frazione che ha:", 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                StringForm[
-                "-come `` la somma dei `` delle frazioni equivalenti trovate \
-nel punto 3;", 
-                 Style["NUMERATORE", $CellContext`es5coloreNumeratore], 
-                 Style["NUMERATORI", $CellContext`es5coloreNumeratore]], 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                StringForm["-come `` il m.c.m. trovato nel punto 2.", 
-                 Style["DENOMINATORE", $CellContext`es5coloreDenominatore]], 
-                FontSize -> $CellContext`es5TextFontSize]]}, {
-              Text[
-               Style[
-                
-                With[{$CellContext`n1 = 
-                  Style[$CellContext`es5numeratore1$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d1 = 
-                  Style[$CellContext`es5denominatore1$$, \
-$CellContext`es5coloreDenominatore], $CellContext`n2 = 
-                  Style[$CellContext`es5numeratore2$$, \
-$CellContext`es5coloreNumeratore], $CellContext`d2 = 
-                  Style[$CellContext`es5denominatore2$$, \
-$CellContext`es5coloreDenominatore], $CellContext`nEq1 = 
-                  Style[$CellContext`es5numeratoreEq1, \
-$CellContext`es5coloreNumeratore], $CellContext`mcm = 
-                  Style[$CellContext`es5mcm, \
-$CellContext`es5coloreDenominatore], $CellContext`nEq2 = 
-                  Style[$CellContext`es5numeratoreEq2, \
-$CellContext`es5coloreNumeratore], $CellContext`nSot = 
-                  Style[$CellContext`es5numeratoreSomma, \
-$CellContext`es5coloreNumeratore]}, 
+                  HoldForm[$CellContext`n2]/HoldForm[$CellContext`mcm]]], 
+                 FontSize -> $CellContext`es5FractionsFontSize]]}, {
+               Text[
+                Style[
+                "4. Ora sei pronto per calcolare la somma!", 
+                 FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
                  StringForm["`` + ``  =  `` + ``  = ``  =  ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
@@ -915,8 +782,21 @@ $CellContext`es5coloreNumeratore]},
                   HoldForm[$CellContext`nEq1 + $CellContext`nEq2]/
                    HoldForm[$CellContext`mcm]], 
                   HoldForm[
-                  HoldForm[$CellContext`nSot]/HoldForm[$CellContext`mcm]]]], 
-                FontSize -> 40]]}}, Alignment -> {Left}], {1000, 550}]), 
+                  HoldForm[$CellContext`nSom]/HoldForm[$CellContext`mcm]]], 
+                 FontSize -> $CellContext`es5FractionsFontSize]]}, {
+               Text[
+                Style[
+                "5. Nel caso fosse necessario ridurre ai minimi termini il \
+risultato.", FontSize -> $CellContext`es5TextFontSize]]}, {
+               Text[
+                Style[
+                 StringForm["`` = ``", 
+                  HoldForm[
+                  HoldForm[$CellContext`nSom]/
+                   HoldForm[$CellContext`mcm]], \
+$CellContext`numSS/$CellContext`denSS], 
+                 FontSize -> $CellContext`es5FractionsFontSize]]}}, 
+             Alignment -> {Left}]], {1000, 600}]), 
         "Specifications" :> {{{$CellContext`es5numeratore1$$, 8, 
             Style["numeratore prima frazione", 
              Directive[
@@ -945,7 +825,7 @@ $CellContext`es5coloreNumeratore]},
          TrackedSymbols :> {$CellContext`es5numeratore1$$, \
 $CellContext`es5denominatore1$$, $CellContext`es5numeratore2$$, \
 $CellContext`es5denominatore2$$}}, "DefaultOptions" :> {}],
-       ImageSizeCache->{1137., {377., 383.}},
+       ImageSizeCache->{1137., {402., 408.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -959,7 +839,15 @@ $CellContext`es5denominatore2$$}}, "DefaultOptions" :> {}],
    Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
  CellChangeTimes->{{3.703846916895042*^9, 3.7038469416130857`*^9}, {
    3.70384702620718*^9, 3.703847051435485*^9}, 3.7038471211262703`*^9, 
-   3.703847173993594*^9, 3.703847239831478*^9}]
+   3.703847173993594*^9, 3.703847239831478*^9, 3.7039958285548067`*^9, 
+   3.703995975978105*^9, {3.703996006588621*^9, 3.703996012624485*^9}, 
+   3.7039960565766478`*^9, 3.703996342391151*^9, {3.703996504400373*^9, 
+   3.7039965141012487`*^9}, 3.7039973600392427`*^9, {3.703997584948144*^9, 
+   3.703997589979128*^9}, 3.703997661098978*^9, 3.703997857030801*^9, 
+   3.703998032844029*^9, 3.703998145576005*^9, 3.703998748840806*^9, 
+   3.703998785632936*^9, 3.703998906863792*^9, 3.703998952923334*^9, 
+   3.7040003880435553`*^9, {3.704000442689561*^9, 3.704000463036503*^9}, 
+   3.704003958265677*^9, {3.704004323977558*^9, 3.704004331959424*^9}}]
 }, Open  ]]
 },
 WindowSize->{1920, 1009},
@@ -978,10 +866,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 29862, 635, 2731, "Input"],
+Cell[558, 20, 26656, 557, 2565, "Input"],
 Cell[CellGroupData[{
-Cell[30445, 659, 129, 2, 32, "Input"],
-Cell[30577, 663, 14511, 298, 777, "Output"]
+Cell[27239, 581, 129, 2, 32, "Input"],
+Cell[27371, 585, 13047, 264, 827, "Output"]
 }, Open  ]]
 }
 ]
