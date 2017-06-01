@@ -1,0 +1,1216 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     58338,       1208]
+NotebookOptionsPosition[     57986,       1191]
+NotebookOutlinePosition[     58320,       1206]
+CellTagsIndexPosition[     58277,       1203]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"es9", "\n", "*", " ", 
+    RowBox[{"Summary", ":", " ", 
+     RowBox[{"restituisce", " ", 
+      RowBox[{"l", "'"}], "esempio", " ", "9", "\n", "*", " ", "Parameters"}],
+      ":", " ", "\n", 
+     RowBox[{"*", " ", 
+      RowBox[{"Return", ":", " ", 
+       RowBox[{"Manipulate", " ", 
+        RowBox[{"dell", "'"}], "esempio", " ", "9"}]}]}]}]}], "\n", "*)"}], 
+  "\n", 
+  RowBox[{
+   RowBox[{"getEsempioRicetta", "[", "]"}], ":=", 
+   RowBox[{"(", "\n", "\t", 
+    RowBox[{
+     RowBox[{"es9coloreNumeratore", " ", "=", " ", "Blue"}], ";", "\n", "\t", 
+     
+     RowBox[{"es9coloreDenominatore", " ", "=", " ", 
+      RowBox[{"RGBColor", "[", "\"\<#008C00\>\"", "]"}]}], ";", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"es9mostraSoluzione", " ", "=", " ", "False"}], ";", "\n", "\n", 
+     "\t", 
+     RowBox[{"Manipulate", "[", 
+      RowBox[{"(*", 
+       RowBox[{
+       "interfaccia", " ", "interattiva", " ", "per", " ", "modifica", " ", 
+        "valori", " ", "variabili", " ", 
+        RowBox[{"all", "'"}], "interno", " ", "di", " ", "espressioni"}], 
+       "*)"}], "\[IndentingNewLine]", "\t", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"es9numeratoreSemplificato1", " ", "=", " ", 
+         RowBox[{"Numerator", "[", " ", 
+          RowBox[{"es9numeratore1", "/", "es9denominatore1"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9denominatoreSemplificato1", " ", "=", " ", 
+         RowBox[{"Denominator", "[", " ", 
+          RowBox[{"es9numeratore1", "/", "es9denominatore1"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9numeratoreSemplificato2", " ", "=", " ", 
+         RowBox[{"Numerator", "[", " ", 
+          RowBox[{"es9numeratore2", "/", "es9denominatore2"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9denominatoreSemplificato2", " ", "=", " ", 
+         RowBox[{"Denominator", "[", 
+          RowBox[{"es9numeratore2", "/", "es9denominatore2"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\t", 
+        RowBox[{"es9numeratoreSemplificato3", " ", "=", " ", 
+         RowBox[{"Numerator", "[", " ", 
+          RowBox[{"es9numeratore3", "/", "es9denominatore3"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9denominatoreSemplificato3", " ", "=", " ", 
+         RowBox[{"Denominator", "[", " ", 
+          RowBox[{"es9numeratore3", "/", "es9denominatore3"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9numeratoreSemplificato4", " ", "=", " ", 
+         RowBox[{"Numerator", "[", " ", 
+          RowBox[{"es9numeratore4", "/", "es9denominatore4"}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"es9denominatoreSemplificato4", " ", "=", " ", 
+         RowBox[{"Denominator", "[", 
+          RowBox[{"es9numeratore4", "/", "es9denominatore4"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+        RowBox[{"es9kgPrimoIngrediente", " ", "=", " ", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"es9numeratore1", " ", "/", "es9denominatore1"}], ",", 
+           "4"}], "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+        RowBox[{"es9kgSecondoIngrediente", " ", "=", " ", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"es9numeratore2", " ", "/", "es9denominatore2"}], ",", 
+           "4"}], "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+        RowBox[{"es9kgTerzoIngrediente", " ", "=", " ", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"es9numeratore3", " ", "/", "es9denominatore3"}], ",", 
+           "4"}], "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+        RowBox[{"es9kgQuartoIngrediente", " ", "=", " ", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"es9numeratore4", " ", "/", "es9denominatore4"}], ",", 
+           "4"}], "]"}]}], ";", "\[IndentingNewLine]", "\n", "\t\t", 
+        RowBox[{"es9TextFontSize", " ", "=", " ", "16"}], ";", "\n", "\t\t", 
+        RowBox[{"es9FractionsFontSize", " ", "=", " ", "24"}], ";", 
+        "\[IndentingNewLine]", "\n", "\t\t", 
+        RowBox[{"Pane", "[", 
+         RowBox[{"(*", 
+          RowBox[{"interfaccia", " ", "a", " ", "finestra"}], "*)"}], 
+         "\[IndentingNewLine]", "\t\t", 
+         RowBox[{
+          RowBox[{"With", "[", 
+           RowBox[{"(*", 
+            RowBox[{
+            "specifica", " ", "delle", " ", "occorrenze", " ", "per", " ", 
+             "le", " ", "variabili", " ", "da", " ", "stampare"}], "*)"}], 
+           "\[IndentingNewLine]", "\t\t", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"n1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9numeratore1", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"d1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9denominatore1", ",", "es9coloreDenominatore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\n", "\t\t\t\t", 
+              RowBox[{"n2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9numeratore2", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"d2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9denominatore2", ",", "es9coloreDenominatore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              RowBox[{"n3", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9numeratore3", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"d3", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9denominatore3", ",", "es9coloreDenominatore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\n", "\t\t\t\t", 
+              RowBox[{"n4", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9numeratore4", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"d4", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9denominatore4", ",", "es9coloreDenominatore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t", 
+              RowBox[{"numS1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9numeratoreSemplificato1", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"numS2", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9numeratoreSemplificato2", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              RowBox[{"denS1", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9denominatoreSemplificato1", ",", "es9coloreDenominatore", 
+                 ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"denS2", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9denominatoreSemplificato2", ",", "es9coloreDenominatore", 
+                 ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              "\t\t", 
+              RowBox[{"numS3", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9numeratoreSemplificato3", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"numS4", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9numeratoreSemplificato4", ",", "es9coloreNumeratore", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              RowBox[{"denS3", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9denominatoreSemplificato3", ",", "es9coloreDenominatore", 
+                 ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"denS4", "=", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "es9denominatoreSemplificato4", ",", "es9coloreDenominatore", 
+                 ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", "\[IndentingNewLine]", "\t\t", 
+              RowBox[{"kg1", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9kgPrimoIngrediente", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"kg2", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9kgSecondoIngrediente", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"kg3", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9kgTerzoIngrediente", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"kg4", " ", "=", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{"es9kgQuartoIngrediente", ",", 
+                 RowBox[{"FontSize", "\[Rule]", "es9FractionsFontSize"}]}], 
+                "]"}]}]}], "}"}], ",", "\n", "\t\t\t", "\[IndentingNewLine]", 
+            
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"!", "es9mostraSoluzione"}], ",", " ", 
+              RowBox[{"(*", 
+               RowBox[{"non", " ", "mostrare", " ", "i", " ", "calcoli"}], 
+               "*)"}], "\[IndentingNewLine]", "\t", 
+              RowBox[{"Grid", "[", 
+               RowBox[{"(*", 
+                RowBox[{
+                "gliglia", " ", "4", "x1", " ", "per", " ", "organizzare", 
+                 " ", "il", " ", "testo", " ", "in", " ", "righe"}], "*)"}], 
+               "\n", "\t\t\t\t", 
+               RowBox[{
+                RowBox[{"{", "\n", "\t\t\t\t\t", 
+                 RowBox[{"(*", 
+                  RowBox[{
+                  "prima", " ", "riga", " ", "della", " ", "griglia"}], 
+                  "*)"}], "\n", "\t\t\t\t\t", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<``  del primo ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n1", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d1", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "seconda", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<``  del secondo ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n2", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d2", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "terza", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<``  del terzo ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n3", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d3", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "quarta", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<``  del quarto ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n4", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d4", "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}]}], "\[IndentingNewLine]", "\t\t", "}"}], ",", 
+                RowBox[{"Alignment", "->", 
+                 RowBox[{"{", "Left", "}"}]}], "\n", "\t\t\t", ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "5"}], "}"}]}]}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"(*", 
+               RowBox[{
+               "altrimenti", " ", "mostra", " ", "i", " ", "calcoli"}], 
+               "*)"}], "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{"(*", 
+                RowBox[{
+                "gliglia", " ", "4", "x1", " ", "per", " ", "organizzare", 
+                 " ", "il", " ", "testo", " ", "in", " ", "righe"}], "*)"}], 
+               "\n", "\t\t\t\t", 
+               RowBox[{
+                RowBox[{"{", "\n", "\t\t\t\t\t", 
+                 RowBox[{"(*", 
+                  RowBox[{
+                  "prima", " ", "riga", " ", "della", " ", "griglia"}], 
+                  "*)"}], "\n", "\t\t\t\t\t", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] `` = `` : `` = `` kg del primo \
+ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n1", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d1", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "numS1", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "denS1", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "numS1", "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "denS1", "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "kg1", "]"}]}], "]"}], ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "seconda", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] `` = `` : `` = `` kg del \
+secondo ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n2", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d2", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "numS2", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "denS2", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "numS2", "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "denS2", "]"}], ",", "kg2"}], 
+                    "]"}], ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "terza", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] `` = `` : `` = `` kg del terzo \
+ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n3", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d3", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "numS3", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "denS3", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "numS3", "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "denS3", "]"}], ",", "kg3"}], 
+                    "]"}], ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}], ",", "\n", "\t\t\t\t\t", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "quarta", " ", "riga", " ", "della", " ", "griglia"}], 
+                   "*)"}], "\n", "\t\t\t\t", 
+                  RowBox[{"{", 
+                   RowBox[{"Text", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<`` \[LeftRightArrow] `` = `` : `` = `` kg del quarto \
+ingrediente\>\"", ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "n4", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "d4", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    RowBox[{"HoldForm", "[", "numS4", "]"}], "/", 
+                    RowBox[{"HoldForm", "[", "denS4", "]"}]}], "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "numS4", "]"}], ",", 
+                    RowBox[{"HoldForm", "[", "denS4", "]"}], ",", "kg4"}], 
+                    "]"}], ",", 
+                    RowBox[{"FontSize", "->", "es9TextFontSize"}]}], "]"}], 
+                    "]"}], "}"}]}], "\[IndentingNewLine]", "\t\t", "}"}], ",",
+                 "\[IndentingNewLine]", 
+                RowBox[{"Alignment", "->", 
+                 RowBox[{"{", "Left", "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "5"}], "}"}]}]}], "]"}]}], 
+             "\[IndentingNewLine]", "]"}]}], 
+           RowBox[{"(*", 
+            RowBox[{"chiusura", " ", "If"}], "*)"}], "\[IndentingNewLine]", 
+           "]"}], 
+          RowBox[{"(*", 
+           RowBox[{"chiusura", " ", "With"}], "*)"}], "\[IndentingNewLine]", 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"550", ",", "500"}], "}"}]}], 
+         RowBox[{"(*", 
+          RowBox[{"dimensioni", " ", "pannello", " ", "\"\<pane\>\""}], 
+          "*)"}], "\t", "\[IndentingNewLine]", "]"}]}], ",", "\t", 
+       "\[IndentingNewLine]", "\t", 
+       RowBox[{"Spacer", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "10"}], "}"}], "]"}], ",", "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{"paramentri", " ", "primo", " ", "slider"}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", "\n", "\t\t\t", 
+          RowBox[{"es9numeratore1", ",", 
+           RowBox[{"(*", 
+            RowBox[{
+            "variabile", " ", "agganciata", " ", "allo", " ", "slider"}], 
+            "*)"}], "\n", "\t\t\t", "8", ",", 
+           RowBox[{"(*", 
+            RowBox[{"valore", " ", "iniziale"}], "*)"}], "\n", "\t\t\t", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<numeratore primo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreNumeratore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          RowBox[{"(*", 
+           RowBox[{"etichetta", " ", "dello", " ", "slider"}], "*)"}], "\n", 
+          "\t\t\t", "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", 
+         RowBox[{"(*", "range", "*)"}], "\n", "\t\t\t", "1", ",", 
+         RowBox[{"(*", 
+          RowBox[{"step", " ", "di", " ", "modifica"}], "*)"}], "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreNumeratore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", "\t",
+        "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{"paramentri", " ", "secondo", " ", "slider"}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "es9denominatore1", ",", "\n", "\t\t\t", "20", ",", "\n", "\t\t\t", 
+           
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<denominatore primo ingrediente\>\"", ",", "\n", "\t\t\t", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreDenominatore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", "1", ",", "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", 
+       "\[IndentingNewLine]", "\t", 
+       RowBox[{"Spacer", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "50"}], "}"}], "]"}], ",", "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"paramentri", " ", "terzo", " ", "slider"}], ",", " ", 
+          RowBox[{"numeratore", " ", "frazione", " ", "2"}]}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", "\n", "\t\t\t", 
+          RowBox[{"es9numeratore2", ",", 
+           RowBox[{"(*", 
+            RowBox[{
+            "variabile", " ", "agganciata", " ", "allo", " ", "slider"}], 
+            "*)"}], "\n", "\t\t\t", "9", ",", 
+           RowBox[{"(*", 
+            RowBox[{"valore", " ", "iniziale"}], "*)"}], "\n", "\t\t\t", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<numeratore secondo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreNumeratore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          RowBox[{"(*", 
+           RowBox[{"etichetta", " ", "dello", " ", "slider"}], "*)"}], "\n", 
+          "\t\t\t", "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", 
+         RowBox[{"(*", "range", "*)"}], "\n", "\t\t\t", "1", ",", 
+         RowBox[{"(*", 
+          RowBox[{"step", " ", "di", " ", "modifica"}], "*)"}], "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreNumeratore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t\t", "}"}], ",", 
+       "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"paramentri", " ", "quarto", " ", "slider"}], ",", " ", 
+          RowBox[{"denominatore", " ", "frazione", " ", "2"}]}], "*)"}], "\n",
+         "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "es9denominatore2", ",", "\n", "\t\t\t", "20", ",", "\n", "\t\t\t", 
+           
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<denominatore secondo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreDenominatore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", "1", ",", "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Spacer", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "50"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+       "\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{"paramentri", " ", "quinto", " ", "slider"}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", "\n", "\t\t\t", 
+          RowBox[{"es9numeratore3", ",", 
+           RowBox[{"(*", 
+            RowBox[{
+            "variabile", " ", "agganciata", " ", "allo", " ", "slider"}], 
+            "*)"}], "\n", "\t\t\t", "10", ",", 
+           RowBox[{"(*", 
+            RowBox[{"valore", " ", "iniziale"}], "*)"}], "\n", "\t\t\t", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<numeratore primo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreNumeratore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          RowBox[{"(*", 
+           RowBox[{"etichetta", " ", "dello", " ", "slider"}], "*)"}], "\n", 
+          "\t\t\t", "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", 
+         RowBox[{"(*", "range", "*)"}], "\n", "\t\t\t", "1", ",", 
+         RowBox[{"(*", 
+          RowBox[{"step", " ", "di", " ", "modifica"}], "*)"}], "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreNumeratore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", "\t",
+        "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{"paramentri", " ", "sesto", " ", "slider"}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "es9denominatore3", ",", "\n", "\t\t\t", "20", ",", "\n", "\t\t\t", 
+           
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<denominatore primo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreDenominatore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", "1", ",", "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Spacer", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "50"}], "}"}], "]"}], ",", "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"paramentri", " ", "settimo", " ", "slider"}], ",", " ", 
+          RowBox[{"numeratore", " ", "frazione", " ", "2"}]}], "*)"}], "\n", 
+        "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", "\n", "\t\t\t", 
+          RowBox[{"es9numeratore4", ",", 
+           RowBox[{"(*", 
+            RowBox[{
+            "variabile", " ", "agganciata", " ", "allo", " ", "slider"}], 
+            "*)"}], "\n", "\t\t\t", "3", ",", 
+           RowBox[{"(*", 
+            RowBox[{"valore", " ", "iniziale"}], "*)"}], "\n", "\t\t\t", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<numeratore secondo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreNumeratore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          RowBox[{"(*", 
+           RowBox[{"etichetta", " ", "dello", " ", "slider"}], "*)"}], "\n", 
+          "\t\t\t", "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", 
+         RowBox[{"(*", "range", "*)"}], "\n", "\t\t\t", "1", ",", 
+         RowBox[{"(*", 
+          RowBox[{"step", " ", "di", " ", "modifica"}], "*)"}], "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreNumeratore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t\t", "}"}], ",", 
+       "\n", "\t\t", 
+       RowBox[{"{", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"paramentri", " ", "ottavo", " ", "slider"}], ",", " ", 
+          RowBox[{"denominatore", " ", "frazione", " ", "2"}]}], "*)"}], "\n",
+         "\t\t\t", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "es9denominatore4", ",", "\n", "\t\t\t", "20", ",", "\n", "\t\t\t", 
+           
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<denominatore secondo ingrediente\>\"", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"es9coloreDenominatore", ",", 
+               RowBox[{"FontSize", "\[Rule]", "13"}]}], "]"}]}], "]"}]}], 
+          "}"}], ",", "\n", "\t\t\t", "1", ",", "100", ",", "1", ",", "\n", 
+         "\t\t\t", 
+         RowBox[{"Appearance", "->", "\"\<Labeled\>\""}], ",", "\n", "\t\t\t", 
+         RowBox[{"LabelStyle", "->", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"es9coloreDenominatore", ",", "Large"}], "]"}]}], ",", 
+         RowBox[{"ImageSize", "->", "200"}]}], "\n", "\t\t", "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Spacer", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "50"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+       "\t", 
+       RowBox[{"Button", "[", 
+        RowBox[{"\"\<Verifica\>\"", ",", 
+         RowBox[{"es9mostraSoluzione", "=", "True"}], ",", 
+         RowBox[{"BaseStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<GenericButton\>\"", ",", "16", ",", "Bold"}], 
+           "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+       RowBox[{"Button", "[", 
+        RowBox[{"\"\<Nascondi soluzione\>\"", ",", 
+         RowBox[{"es9mostraSoluzione", "=", "False"}], ",", 
+         RowBox[{"BaseStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<GenericButton\>\"", ",", "16", ",", "Bold"}], 
+           "}"}]}]}], "]"}], ",", "\n", "\t\t", 
+       RowBox[{"TrackedSymbols", ":>", 
+        RowBox[{"{", 
+         RowBox[{
+         "es9numeratore1", ",", "es9denominatore1", ",", "es9numeratore2", 
+          ",", "es9denominatore2", ",", "es9numeratore3", ",", 
+          "es9denominatore3", ",", "es9numeratore4", ",", "es9denominatore4", 
+          ",", "es9mostraSoluzione"}], "}"}]}]}], "\n", "\t", "]"}]}], "\n", 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.703846463339691*^9, 3.7038464766333323`*^9}, {
+   3.70384655931227*^9, 3.703846559501505*^9}, {3.703846603409092*^9, 
+   3.70384660741893*^9}, {3.703846651776449*^9, 3.70384667108842*^9}, {
+   3.7038467022535067`*^9, 3.7038468330836363`*^9}, {3.703846871335919*^9, 
+   3.703846871975699*^9}, {3.703846980953897*^9, 3.703847035675108*^9}, {
+   3.703847090622674*^9, 3.7038471322558813`*^9}, 3.703847230136301*^9, {
+   3.7039958728688173`*^9, 3.7039959114237137`*^9}, {3.7039959459969263`*^9, 
+   3.703995972251524*^9}, {3.703996003228677*^9, 3.703996053030497*^9}, {
+   3.703996327454556*^9, 3.703996338030347*^9}, {3.703996509217772*^9, 
+   3.7039965362477417`*^9}, {3.703996615347042*^9, 3.703996621695825*^9}, 
+   3.7039966650428534`*^9, {3.703996748609404*^9, 3.70399682201823*^9}, {
+   3.703996907467239*^9, 3.7039970136660013`*^9}, 3.703997046061221*^9, {
+   3.703997262193493*^9, 3.703997580081118*^9}, {3.703997619363941*^9, 
+   3.7039976587375393`*^9}, 3.703997707697569*^9, {3.703997815041523*^9, 
+   3.7039978156987343`*^9}, {3.703997919862211*^9, 3.703997936413035*^9}, {
+   3.703998025794168*^9, 3.703998140250471*^9}, {3.703998238611648*^9, 
+   3.7039983062870483`*^9}, 3.703998340079603*^9, {3.70399865954213*^9, 
+   3.70399878249781*^9}, {3.703998873256784*^9, 3.703998903712203*^9}, {
+   3.7039989382676983`*^9, 3.703998949972934*^9}, {3.704000414103211*^9, 
+   3.704000449654531*^9}, {3.7040038642418623`*^9, 3.704003902138129*^9}, {
+   3.7040041466140738`*^9, 3.704004238970347*^9}, {3.704004315875321*^9, 
+   3.704004321407064*^9}, {3.704079311361973*^9, 3.7040793296071873`*^9}, {
+   3.704079369475952*^9, 3.7040793957820597`*^9}, {3.7040794295155363`*^9, 
+   3.704079429691395*^9}, 3.7040794714615097`*^9, {3.704079515998541*^9, 
+   3.704079551832089*^9}, {3.704079593646264*^9, 3.7040795952569513`*^9}, {
+   3.704079628645615*^9, 3.704079689053874*^9}, {3.70407973017801*^9, 
+   3.7040798001672564`*^9}, {3.704079869516575*^9, 3.704080262416422*^9}, {
+   3.704080395691937*^9, 3.704080474728304*^9}, {3.704080506014194*^9, 
+   3.7040805061291637`*^9}, {3.704080672155368*^9, 3.7040806731360197`*^9}, {
+   3.704080705482582*^9, 3.704080778746766*^9}, {3.70408092910281*^9, 
+   3.704081091571307*^9}, {3.704081123238391*^9, 3.70408115268609*^9}, {
+   3.7040812132478437`*^9, 3.704081248084105*^9}, {3.704081291173332*^9, 
+   3.704081382417198*^9}, {3.704081435204425*^9, 3.704081450743573*^9}, {
+   3.7040815475470963`*^9, 3.7040815719487467`*^9}, {3.704081604911943*^9, 
+   3.704081637794688*^9}, {3.7040817311244717`*^9, 3.704081743476182*^9}, {
+   3.704081958500061*^9, 3.704082059523265*^9}, {3.704082096540133*^9, 
+   3.704082135361961*^9}, {3.704082187996633*^9, 3.704082195116364*^9}, {
+   3.704082407638406*^9, 3.704082416054401*^9}, {3.704082448737047*^9, 
+   3.704082586934937*^9}, {3.704083075711117*^9, 3.704083119977215*^9}, {
+   3.704083190832686*^9, 3.7040832417072372`*^9}, {3.704083294093267*^9, 
+   3.704083369807715*^9}, {3.704083410516594*^9, 3.704083632647089*^9}, {
+   3.704083674660305*^9, 3.704083761213422*^9}, 3.704083808094363*^9, {
+   3.70408393120966*^9, 3.704083981304297*^9}, {3.704170372773119*^9, 
+   3.704170403975872*^9}, {3.704170437923177*^9, 3.704170438058075*^9}, {
+   3.704170472360692*^9, 3.704170473156543*^9}, {3.7041707154423532`*^9, 
+   3.704170715490529*^9}, {3.7041707676330442`*^9, 3.70417076879141*^9}, {
+   3.7041712713167267`*^9, 3.704171302497572*^9}, {3.704171400746619*^9, 
+   3.704171405778406*^9}, {3.704171439814261*^9, 3.704171441689909*^9}, {
+   3.7041715877105637`*^9, 3.704171710698814*^9}, {3.7041717414461737`*^9, 
+   3.704171826243986*^9}, {3.704171863965946*^9, 3.704171872867836*^9}, {
+   3.704171997525642*^9, 3.7041720115633183`*^9}, {3.704172055417521*^9, 
+   3.704172071649995*^9}, {3.7041721432557993`*^9, 3.7041721639142113`*^9}, {
+   3.704173019336445*^9, 3.7041730332351713`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"getEsempioRicetta", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.703846897620142*^9, 3.703846916108837*^9}, {
+  3.704079438745269*^9, 3.70407944513442*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`es9denominatore1$$ = 
+      47, $CellContext`es9denominatore2$$ = 
+      20, $CellContext`es9denominatore3$$ = 
+      20, $CellContext`es9denominatore4$$ = 
+      20, $CellContext`es9numeratore1$$ = 36, $CellContext`es9numeratore2$$ = 
+      9, $CellContext`es9numeratore3$$ = 10, $CellContext`es9numeratore4$$ = 
+      3, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+        Hold[
+         Spacer[{0, 10}]], Manipulate`Dump`ThisIsNotAControl}, {{
+         Hold[$CellContext`es9numeratore1$$], 8, 
+         Style["numeratore primo ingrediente", 
+          Directive[
+           RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1}, {{
+         Hold[$CellContext`es9denominatore1$$], 20, 
+         Style["denominatore primo ingrediente", 
+          Directive[
+           RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100, 
+        1}, {
+        Hold[
+         Spacer[{0, 50}]], Manipulate`Dump`ThisIsNotAControl}, {{
+         Hold[$CellContext`es9numeratore2$$], 9, 
+         Style["numeratore secondo ingrediente", 
+          Directive[
+           RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1}, {{
+         Hold[$CellContext`es9denominatore2$$], 20, 
+         Style["denominatore secondo ingrediente", 
+          Directive[
+           RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100, 
+        1}, {
+        Hold[
+         Spacer[{0, 50}]], Manipulate`Dump`ThisIsNotAControl}, {{
+         Hold[$CellContext`es9numeratore3$$], 10, 
+         Style["numeratore primo ingrediente", 
+          Directive[
+           RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1}, {{
+         Hold[$CellContext`es9denominatore3$$], 20, 
+         Style["denominatore primo ingrediente", 
+          Directive[
+           RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100, 
+        1}, {
+        Hold[
+         Spacer[{0, 50}]], Manipulate`Dump`ThisIsNotAControl}, {{
+         Hold[$CellContext`es9numeratore4$$], 3, 
+         Style["numeratore secondo ingrediente", 
+          Directive[
+           RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1}, {{
+         Hold[$CellContext`es9denominatore4$$], 20, 
+         Style["denominatore secondo ingrediente", 
+          Directive[
+           RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100, 
+        1}, {
+        Hold[
+         Spacer[{0, 50}]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Button[
+         "Verifica", $CellContext`es9mostraSoluzione = True, 
+          BaseStyle -> {"GenericButton", 16, Bold}]], 
+        Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Button[
+         "Nascondi soluzione", $CellContext`es9mostraSoluzione = False, 
+          BaseStyle -> {"GenericButton", 16, Bold}]], 
+        Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
+      550., {247., 253.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`es9numeratore1$9381$$ = 
+      0, $CellContext`es9denominatore1$9382$$ = 
+      0, $CellContext`es9numeratore2$9383$$ = 
+      0, $CellContext`es9denominatore2$9384$$ = 
+      0, $CellContext`es9numeratore3$9385$$ = 
+      0, $CellContext`es9denominatore3$9386$$ = 
+      0, $CellContext`es9numeratore4$9387$$ = 
+      0, $CellContext`es9denominatore4$9388$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`es9denominatore1$$ = 
+          20, $CellContext`es9denominatore2$$ = 
+          20, $CellContext`es9denominatore3$$ = 
+          20, $CellContext`es9denominatore4$$ = 
+          20, $CellContext`es9numeratore1$$ = 
+          8, $CellContext`es9numeratore2$$ = 9, $CellContext`es9numeratore3$$ = 
+          10, $CellContext`es9numeratore4$$ = 3}, "ControllerVariables" :> {
+          
+          Hold[$CellContext`es9numeratore1$$, \
+$CellContext`es9numeratore1$9381$$, 0], 
+          
+          Hold[$CellContext`es9denominatore1$$, \
+$CellContext`es9denominatore1$9382$$, 0], 
+          
+          Hold[$CellContext`es9numeratore2$$, \
+$CellContext`es9numeratore2$9383$$, 0], 
+          
+          Hold[$CellContext`es9denominatore2$$, \
+$CellContext`es9denominatore2$9384$$, 0], 
+          
+          Hold[$CellContext`es9numeratore3$$, \
+$CellContext`es9numeratore3$9385$$, 0], 
+          
+          Hold[$CellContext`es9denominatore3$$, \
+$CellContext`es9denominatore3$9386$$, 0], 
+          
+          Hold[$CellContext`es9numeratore4$$, \
+$CellContext`es9numeratore4$9387$$, 0], 
+          
+          Hold[$CellContext`es9denominatore4$$, \
+$CellContext`es9denominatore4$9388$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`es9numeratoreSemplificato1 = 
+          Numerator[$CellContext`es9numeratore1$$/$CellContext`\
+es9denominatore1$$]; $CellContext`es9denominatoreSemplificato1 = 
+          Denominator[$CellContext`es9numeratore1$$/$CellContext`\
+es9denominatore1$$]; $CellContext`es9numeratoreSemplificato2 = 
+          Numerator[$CellContext`es9numeratore2$$/$CellContext`\
+es9denominatore2$$]; $CellContext`es9denominatoreSemplificato2 = 
+          Denominator[$CellContext`es9numeratore2$$/$CellContext`\
+es9denominatore2$$]; $CellContext`es9numeratoreSemplificato3 = 
+          Numerator[$CellContext`es9numeratore3$$/$CellContext`\
+es9denominatore3$$]; $CellContext`es9denominatoreSemplificato3 = 
+          Denominator[$CellContext`es9numeratore3$$/$CellContext`\
+es9denominatore3$$]; $CellContext`es9numeratoreSemplificato4 = 
+          Numerator[$CellContext`es9numeratore4$$/$CellContext`\
+es9denominatore4$$]; $CellContext`es9denominatoreSemplificato4 = 
+          Denominator[$CellContext`es9numeratore4$$/$CellContext`\
+es9denominatore4$$]; $CellContext`es9kgPrimoIngrediente = 
+          N[$CellContext`es9numeratore1$$/$CellContext`es9denominatore1$$, 
+            4]; $CellContext`es9kgSecondoIngrediente = 
+          N[$CellContext`es9numeratore2$$/$CellContext`es9denominatore2$$, 
+            4]; $CellContext`es9kgTerzoIngrediente = 
+          N[$CellContext`es9numeratore3$$/$CellContext`es9denominatore3$$, 
+            4]; $CellContext`es9kgQuartoIngrediente = 
+          N[$CellContext`es9numeratore4$$/$CellContext`es9denominatore4$$, 
+            4]; $CellContext`es9TextFontSize = 
+          16; $CellContext`es9FractionsFontSize = 24; Pane[
+           
+           With[{$CellContext`n1 = 
+             Style[$CellContext`es9numeratore1$$, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`d1 = 
+             Style[$CellContext`es9denominatore1$$, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`n2 = 
+             Style[$CellContext`es9numeratore2$$, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`d2 = 
+             Style[$CellContext`es9denominatore2$$, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`n3 = 
+             Style[$CellContext`es9numeratore3$$, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`d3 = 
+             Style[$CellContext`es9denominatore3$$, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`n4 = 
+             Style[$CellContext`es9numeratore4$$, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`d4 = 
+             Style[$CellContext`es9denominatore4$$, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`numS1 = 
+             Style[$CellContext`es9numeratoreSemplificato1, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`numS2 = 
+             Style[$CellContext`es9numeratoreSemplificato2, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`denS1 = 
+             Style[$CellContext`es9denominatoreSemplificato1, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`denS2 = 
+             Style[$CellContext`es9denominatoreSemplificato2, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`numS3 = 
+             Style[$CellContext`es9numeratoreSemplificato3, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`numS4 = 
+             Style[$CellContext`es9numeratoreSemplificato4, \
+$CellContext`es9coloreNumeratore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`denS3 = 
+             Style[$CellContext`es9denominatoreSemplificato3, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`denS4 = 
+             Style[$CellContext`es9denominatoreSemplificato4, \
+$CellContext`es9coloreDenominatore, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`kg1 = 
+             Style[$CellContext`es9kgPrimoIngrediente, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`kg2 = 
+             Style[$CellContext`es9kgSecondoIngrediente, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`kg3 = 
+             Style[$CellContext`es9kgTerzoIngrediente, 
+               FontSize -> $CellContext`es9FractionsFontSize], \
+$CellContext`kg4 = 
+             Style[$CellContext`es9kgQuartoIngrediente, 
+               FontSize -> $CellContext`es9FractionsFontSize]}, 
+            If[
+             Not[$CellContext`es9mostraSoluzione], 
+             Grid[{{
+                Text[
+                 Style[
+                  StringForm["``  del primo ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]]], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm["``  del secondo ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n2]/HoldForm[$CellContext`d2]]], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm["``  del terzo ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n3]/HoldForm[$CellContext`d3]]], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm["``  del quarto ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n4]/HoldForm[$CellContext`d4]]], 
+                  FontSize -> $CellContext`es9TextFontSize]]}}, 
+              Alignment -> {Left}, Spacings -> {0, 5}], 
+             Grid[{{
+                Text[
+                 Style[
+                  StringForm[
+                  "`` \[LeftRightArrow] `` = `` : `` = `` kg del primo \
+ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
+                   HoldForm[
+                   HoldForm[$CellContext`numS1]/HoldForm[$CellContext`denS1]], 
+                   HoldForm[$CellContext`numS1], 
+                   HoldForm[$CellContext`denS1], 
+                   HoldForm[$CellContext`kg1]], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm[
+                  "`` \[LeftRightArrow] `` = `` : `` = `` kg del secondo \
+ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n2]/HoldForm[$CellContext`d2]], 
+                   HoldForm[
+                   HoldForm[$CellContext`numS2]/HoldForm[$CellContext`denS2]], 
+                   HoldForm[$CellContext`numS2], 
+                   HoldForm[$CellContext`denS2], $CellContext`kg2], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm[
+                  "`` \[LeftRightArrow] `` = `` : `` = `` kg del terzo \
+ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n3]/HoldForm[$CellContext`d3]], 
+                   HoldForm[
+                   HoldForm[$CellContext`numS3]/HoldForm[$CellContext`denS3]], 
+                   HoldForm[$CellContext`numS3], 
+                   HoldForm[$CellContext`denS3], $CellContext`kg3], 
+                  FontSize -> $CellContext`es9TextFontSize]]}, {
+                Text[
+                 Style[
+                  StringForm[
+                  "`` \[LeftRightArrow] `` = `` : `` = `` kg del quarto \
+ingrediente", 
+                   HoldForm[
+                   HoldForm[$CellContext`n4]/HoldForm[$CellContext`d4]], 
+                   HoldForm[
+                   HoldForm[$CellContext`numS4]/HoldForm[$CellContext`denS4]], 
+                   HoldForm[$CellContext`numS4], 
+                   HoldForm[$CellContext`denS4], $CellContext`kg4], 
+                  FontSize -> $CellContext`es9TextFontSize]]}}, 
+              Alignment -> {Left}, Spacings -> {0, 5}]]], {550, 500}]), 
+        "Specifications" :> {
+          Spacer[{0, 10}], {{$CellContext`es9numeratore1$$, 8, 
+            Style["numeratore primo ingrediente", 
+             Directive[
+              RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1, Appearance -> 
+           "Labeled", LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 
+           200}, {{$CellContext`es9denominatore1$$, 20, 
+            Style["denominatore primo ingrediente", 
+             Directive[
+              RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100,
+            1, Appearance -> "Labeled", LabelStyle -> Directive[
+             RGBColor[0., 0.5490196078431373, 0.], Large], ImageSize -> 200}, 
+          
+          Spacer[{0, 50}], {{$CellContext`es9numeratore2$$, 9, 
+            Style["numeratore secondo ingrediente", 
+             Directive[
+              RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1, Appearance -> 
+           "Labeled", LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 
+           200}, {{$CellContext`es9denominatore2$$, 20, 
+            Style["denominatore secondo ingrediente", 
+             Directive[
+              RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100,
+            1, Appearance -> "Labeled", LabelStyle -> Directive[
+             RGBColor[0., 0.5490196078431373, 0.], Large], ImageSize -> 200}, 
+          
+          Spacer[{0, 50}], {{$CellContext`es9numeratore3$$, 10, 
+            Style["numeratore primo ingrediente", 
+             Directive[
+              RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1, Appearance -> 
+           "Labeled", LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 
+           200}, {{$CellContext`es9denominatore3$$, 20, 
+            Style["denominatore primo ingrediente", 
+             Directive[
+              RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100,
+            1, Appearance -> "Labeled", LabelStyle -> Directive[
+             RGBColor[0., 0.5490196078431373, 0.], Large], ImageSize -> 200}, 
+          
+          Spacer[{0, 50}], {{$CellContext`es9numeratore4$$, 3, 
+            Style["numeratore secondo ingrediente", 
+             Directive[
+              RGBColor[0, 0, 1], FontSize -> 13]]}, 1, 100, 1, Appearance -> 
+           "Labeled", LabelStyle -> Directive[
+             RGBColor[0, 0, 1], Large], ImageSize -> 
+           200}, {{$CellContext`es9denominatore4$$, 20, 
+            Style["denominatore secondo ingrediente", 
+             Directive[
+              RGBColor[0., 0.5490196078431373, 0.], FontSize -> 13]]}, 1, 100,
+            1, Appearance -> "Labeled", LabelStyle -> Directive[
+             RGBColor[0., 0.5490196078431373, 0.], Large], ImageSize -> 200}, 
+          
+          Spacer[{0, 50}], 
+          Button[
+          "Verifica", $CellContext`es9mostraSoluzione = True, 
+           BaseStyle -> {"GenericButton", 16, Bold}], 
+          Button[
+          "Nascondi soluzione", $CellContext`es9mostraSoluzione = False, 
+           BaseStyle -> {"GenericButton", 16, Bold}]}, 
+        "Options" :> {
+         TrackedSymbols :> {$CellContext`es9numeratore1$$, \
+$CellContext`es9denominatore1$$, $CellContext`es9numeratore2$$, \
+$CellContext`es9denominatore2$$, $CellContext`es9numeratore3$$, \
+$CellContext`es9denominatore3$$, $CellContext`es9numeratore4$$, \
+$CellContext`es9denominatore4$$, $CellContext`es9mostraSoluzione}}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{1165., {304., 310.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.703846916895042*^9, 3.7038469416130857`*^9}, {
+   3.70384702620718*^9, 3.703847051435485*^9}, 3.7038471211262703`*^9, 
+   3.703847173993594*^9, 3.703847239831478*^9, 3.7039958285548067`*^9, 
+   3.703995975978105*^9, {3.703996006588621*^9, 3.703996012624485*^9}, 
+   3.7039960565766478`*^9, 3.703996342391151*^9, {3.703996504400373*^9, 
+   3.7039965141012487`*^9}, 3.7039973600392427`*^9, {3.703997584948144*^9, 
+   3.703997589979128*^9}, 3.703997661098978*^9, 3.703997857030801*^9, 
+   3.703998032844029*^9, 3.703998145576005*^9, 3.703998748840806*^9, 
+   3.703998785632936*^9, 3.703998906863792*^9, 3.703998952923334*^9, 
+   3.7040003880435553`*^9, {3.704000442689561*^9, 3.704000463036503*^9}, 
+   3.704003958265677*^9, {3.704004323977558*^9, 3.704004331959424*^9}, 
+   3.704079276839113*^9, {3.7040793381401997`*^9, 3.704079348019693*^9}, {
+   3.704079432573284*^9, 3.704079446960422*^9}, {3.7040795207721367`*^9, 
+   3.704079555907195*^9}, 3.704079601050734*^9, {3.7040796464845543`*^9, 
+   3.7040796513822117`*^9}, 3.704079691442522*^9, 3.704080178449614*^9, {
+   3.7040802255267143`*^9, 3.7040802652521143`*^9}, {3.70408042049238*^9, 
+   3.704080476890586*^9}, 3.704080509947125*^9, 3.7040810993653316`*^9, 
+   3.704081156695436*^9, 3.704081253053289*^9, {3.7040813319971447`*^9, 
+   3.704081389027259*^9}, {3.704081441580131*^9, 3.704081457889982*^9}, {
+   3.70408155470277*^9, 3.7040815743566227`*^9}, 3.7040816405859137`*^9, {
+   3.7040830792995987`*^9, 3.70408312232423*^9}, {3.704083222119668*^9, 
+   3.704083244759265*^9}, {3.704083356148299*^9, 3.704083373212318*^9}, 
+   3.70408363752835*^9, 3.704083688456977*^9, 3.704083810707583*^9, 
+   3.704083851649272*^9, 3.704083940324892*^9, 3.704083983610381*^9, 
+   3.704084071135663*^9, 3.704168072497167*^9, 3.704170271455987*^9, {
+   3.704170377109971*^9, 3.7041704064641027`*^9}, {3.704170448038169*^9, 
+   3.704170477043103*^9}, 3.7041707185762253`*^9, {3.704170773015687*^9, 
+   3.704170801090766*^9}, {3.704171274804154*^9, 3.704171305203746*^9}, 
+   3.704171411279953*^9, 3.7041715128206663`*^9, {3.704171598970603*^9, 
+   3.704171713157683*^9}, {3.704171744630702*^9, 3.70417179610658*^9}, {
+   3.704171828559058*^9, 3.704171841130928*^9}, {3.704171874851858*^9, 
+   3.704171881188717*^9}, {3.704172001178692*^9, 3.704172015331531*^9}, 
+   3.704172075365453*^9, 3.704172615788122*^9, 3.704173036677878*^9}]
+}, Open  ]]
+},
+WindowSize->{1920, 1009},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 36971, 749, 3732, "Input"],
+Cell[CellGroupData[{
+Cell[37554, 773, 179, 3, 32, "Input"],
+Cell[37736, 778, 20234, 410, 631, "Output"]
+}, Open  ]]
+}
+]
+*)
+

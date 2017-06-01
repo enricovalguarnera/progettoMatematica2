@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     35438,        747]
-NotebookOptionsPosition[     35086,        730]
-NotebookOutlinePosition[     35420,        745]
-CellTagsIndexPosition[     35377,        742]
+NotebookDataLength[     35606,        749]
+NotebookOptionsPosition[     35254,        732]
+NotebookOutlinePosition[     35588,        747]
+CellTagsIndexPosition[     35545,        744]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -189,7 +189,7 @@ Cell[BoxData[
                   RowBox[{"Style", "[", 
                    RowBox[{
                     RowBox[{"StringForm", "[", 
-                    RowBox[{"\"\<`` x ``\>\"", ",", 
+                    RowBox[{"\"\<`` \[Times] ``\>\"", ",", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "n1", "]"}], "/", 
@@ -272,8 +272,8 @@ Cell[BoxData[
                    RowBox[{
                     RowBox[{"StringForm", "[", 
                     RowBox[{
-                    "\"\<`` x ``  =  `` x ``  = ``  =  ``\>\"", ",", 
-                    "\[IndentingNewLine]", "\t\t\t\t", 
+                    "\"\<`` \[Times] ``  =  `` \[Times] ``  = ``  =  ``\>\"", 
+                    ",", "\[IndentingNewLine]", "\t\t\t\t", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "n1", "]"}], "/", 
@@ -295,10 +295,11 @@ Cell[BoxData[
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", 
-                    RowBox[{"numS1", " ", "x", " ", "numS2"}], "]"}], "/", 
+                    RowBox[{"numS1", " ", "\[Times]", " ", "numS2"}], "]"}], 
+                    "/", 
                     RowBox[{"HoldForm", "[", 
-                    RowBox[{"dens1", " ", "x", " ", "dens2"}], "]"}]}], "]"}],
-                     ",", "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{"dens1", " ", "\[Times]", " ", "dens2"}], "]"}]}],
+                     "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "numS", "]"}], "/", 
@@ -485,7 +486,8 @@ termini il risultato.\>\"", ",",
    3.7040012923637733`*^9, 3.7040013834717703`*^9}, {3.70400141360525*^9, 
    3.704001816572928*^9}, {3.7040018549860563`*^9, 3.704001880332066*^9}, {
    3.70400217286089*^9, 3.704002178927895*^9}, {3.704002228436451*^9, 
-   3.70400244323768*^9}, {3.7040040615137453`*^9, 3.70400406753249*^9}}],
+   3.70400244323768*^9}, {3.7040040615137453`*^9, 3.70400406753249*^9}, {
+   3.7040065331831503`*^9, 3.7040065803480873`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -523,10 +525,10 @@ Cell[BoxData[
            RGBColor[0., 0.5490196078431373, 0.], Large]]}, 1, 100, 1}}, 
       Typeset`size$$ = {1000., {222., 228.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`es6numeratore1$365$$ = 
-      0, $CellContext`es6denominatore1$366$$ = 
-      0, $CellContext`es6numeratore2$367$$ = 
-      0, $CellContext`es6denominatore2$368$$ = 0}, 
+      True, $CellContext`es6numeratore1$502$$ = 
+      0, $CellContext`es6denominatore1$503$$ = 
+      0, $CellContext`es6numeratore2$504$$ = 
+      0, $CellContext`es6denominatore2$505$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`es6denominatore1$$ = 
@@ -535,16 +537,16 @@ Cell[BoxData[
           18, $CellContext`es6numeratore2$$ = 4}, "ControllerVariables" :> {
           
           Hold[$CellContext`es6numeratore1$$, \
-$CellContext`es6numeratore1$365$$, 0], 
+$CellContext`es6numeratore1$502$$, 0], 
           
           Hold[$CellContext`es6denominatore1$$, \
-$CellContext`es6denominatore1$366$$, 0], 
+$CellContext`es6denominatore1$503$$, 0], 
           
           Hold[$CellContext`es6numeratore2$$, \
-$CellContext`es6numeratore2$367$$, 0], 
+$CellContext`es6numeratore2$504$$, 0], 
           
           Hold[$CellContext`es6denominatore2$$, \
-$CellContext`es6denominatore2$368$$, 0]}, 
+$CellContext`es6denominatore2$505$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -605,7 +607,7 @@ $CellContext`es6coloreDenominatore]},
                  FontSize -> $CellContext`es6TextFontSize]]}, {
                Text[
                 Style[
-                 StringForm["`` x ``", 
+                 StringForm["`` \[Times] ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
                   HoldForm[
@@ -617,7 +619,7 @@ $CellContext`es6coloreDenominatore]},
                  FontSize -> $CellContext`es6TextFontSize]]}, {
                Text[
                 Style[
-                "1. ridurre ogni frazione ai minimi termini", 
+                "1. Ridurre ogni frazione ai minimi termini", 
                  FontSize -> $CellContext`es6TextFontSize]]}, {
                Text[
                 Style[
@@ -635,11 +637,12 @@ $CellContext`es6coloreDenominatore]},
                   FontSize -> $CellContext`es6FractionsFontSize]]}, {
                Text[
                 Style[
-                "4. Ora sei pronto per calcolare il prodotto!", 
+                "2. Ora sei pronto per calcolare il prodotto!", 
                  FontSize -> $CellContext`es6TextFontSize]]}, {
                Text[
                 Style[
-                 StringForm["`` x ``  =  `` x ``  = ``  =  ``", 
+                 StringForm[
+                 "`` \[Times] ``  =  `` \[Times] ``  = ``  =  ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
                   HoldForm[
@@ -651,16 +654,14 @@ $CellContext`es6coloreDenominatore]},
                   HoldForm[$CellContext`numS2]/HoldForm[$CellContext`dens2]], 
                   
                   HoldForm[
-                  HoldForm[$CellContext`numS1 $CellContext`x \
-$CellContext`numS2]/
-                   HoldForm[$CellContext`dens1 $CellContext`x \
-$CellContext`dens2]], 
+                  HoldForm[$CellContext`numS1 $CellContext`numS2]/
+                   HoldForm[$CellContext`dens1 $CellContext`dens2]], 
                   HoldForm[
                   HoldForm[$CellContext`numS]/HoldForm[$CellContext`dens]]], 
                  FontSize -> $CellContext`es6FractionsFontSize]]}, {
                Text[
                 Style[
-                "Nel caso fosse necessario ridurre ai minimi termini il \
+                "3. Nel caso fosse necessario ridurre ai minimi termini il \
 risultato.", FontSize -> $CellContext`es6TextFontSize]]}, {
                Text[
                 Style[
@@ -725,7 +726,8 @@ $CellContext`es6denominatore2$$}}, "DefaultOptions" :> {}],
    3.704001194492422*^9, 3.704001219619342*^9}, 3.704001387524013*^9, 
    3.70400181923426*^9, 3.7040018828456717`*^9, 3.704001921696652*^9, 
    3.704002008563657*^9, 3.704002155948077*^9, {3.70400242457265*^9, 
-   3.704002445978014*^9}, 3.704004033493554*^9}]
+   3.704002445978014*^9}, 3.704004033493554*^9, 3.704006551365531*^9, 
+   3.7040065925070553`*^9}]
 }, Open  ]]
 },
 WindowSize->{1920, 1009},
@@ -744,10 +746,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 22755, 467, 2359, "Input"],
+Cell[558, 20, 22865, 469, 2359, "Input"],
 Cell[CellGroupData[{
-Cell[23338, 491, 181, 3, 32, "Input"],
-Cell[23522, 496, 11548, 231, 677, "Output"]
+Cell[23448, 493, 181, 3, 32, "Input"],
+Cell[23632, 498, 11606, 231, 677, "Output"]
 }, Open  ]]
 }
 ]

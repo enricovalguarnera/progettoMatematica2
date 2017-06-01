@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     39028,        817]
-NotebookOptionsPosition[     38474,        796]
-NotebookOutlinePosition[     39010,        815]
-CellTagsIndexPosition[     38967,        812]
+NotebookDataLength[     39117,        817]
+NotebookOptionsPosition[     38563,        796]
+NotebookOutlinePosition[     39099,        815]
+CellTagsIndexPosition[     39056,        812]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -312,7 +312,7 @@ divisore\>\"", ",",
                    RowBox[{
                     RowBox[{"StringForm", "[", 
                     RowBox[{
-                    "\"\<`` : ``  =  `` x ``  = ``  =  ``\>\"", ",", 
+                    "\"\<`` : ``  =  `` \[Times] ``  = ``  =  ``\>\"", ",", 
                     "\[IndentingNewLine]", "\t\t\t\t", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
@@ -335,10 +335,11 @@ divisore\>\"", ",",
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", 
-                    RowBox[{"numS1", " ", "x", " ", "denS2"}], "]"}], "/", 
+                    RowBox[{"numS1", " ", "\[Times]", " ", "denS2"}], "]"}], 
+                    "/", 
                     RowBox[{"HoldForm", "[", 
-                    RowBox[{"dens1", " ", "x", " ", "numS2"}], "]"}]}], "]"}],
-                     ",", "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{"dens1", " ", "\[Times]", " ", "numS2"}], "]"}]}],
+                     "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t", 
                     RowBox[{"HoldForm", "[", 
                     RowBox[{
                     RowBox[{"HoldForm", "[", "numS", "]"}], "/", 
@@ -533,7 +534,8 @@ termini il risultato.\>\"", ",",
    3.704003560836214*^9, 3.704003571065857*^9}, {3.704003601418741*^9, 
    3.704003611325292*^9}, {3.704003647155504*^9, 3.704003660483809*^9}, {
    3.704003693088401*^9, 3.704003699910261*^9}, {3.7040037810126457`*^9, 
-   3.7040037814491034`*^9}, {3.7040041004255037`*^9, 3.704004103994523*^9}}],
+   3.7040037814491034`*^9}, {3.7040041004255037`*^9, 3.704004103994523*^9}, {
+   3.704006699117284*^9, 3.7040067027234173`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -702,7 +704,7 @@ $CellContext`es7coloreDenominatore]},
                  FontSize -> $CellContext`es7TextFontSize]]}, {
                Text[
                 Style[
-                 StringForm["`` : ``  =  `` x ``  = ``  =  ``", 
+                 StringForm["`` : ``  =  `` \[Times] ``  = ``  =  ``", 
                   HoldForm[
                   HoldForm[$CellContext`n1]/HoldForm[$CellContext`d1]], 
                   HoldForm[
@@ -714,10 +716,8 @@ $CellContext`es7coloreDenominatore]},
                   HoldForm[$CellContext`denS2]/HoldForm[$CellContext`numS2]], 
                   
                   HoldForm[
-                  HoldForm[$CellContext`numS1 $CellContext`x \
-$CellContext`denS2]/
-                   HoldForm[$CellContext`dens1 $CellContext`x \
-$CellContext`numS2]], 
+                  HoldForm[$CellContext`numS1 $CellContext`denS2]/
+                   HoldForm[$CellContext`dens1 $CellContext`numS2]], 
                   HoldForm[
                   HoldForm[$CellContext`numS]/HoldForm[$CellContext`dens]]], 
                  FontSize -> $CellContext`es7FractionsFontSize]]}, {
@@ -791,7 +791,7 @@ $CellContext`es7denominatore2$$}}, "DefaultOptions" :> {}],
    3.704002445978014*^9}, 3.7040026842658577`*^9, 3.7040027418108377`*^9, 
    3.704002927550021*^9, {3.704003344895226*^9, 3.704003363582437*^9}, 
    3.704003465211244*^9, 3.704003519705743*^9, 3.704003613731453*^9, 
-   3.7040036631759863`*^9, 3.7040041229060383`*^9}]
+   3.7040036631759863`*^9, 3.7040041229060383`*^9, 3.704006710402672*^9}]
 }, Open  ]]
 },
 WindowSize->{1920, 1009},
@@ -814,10 +814,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 25279, 515, 2513, "Input"],
+Cell[558, 20, 25373, 517, 2513, "Input"],
 Cell[CellGroupData[{
-Cell[25862, 539, 231, 4, 32, "Input"],
-Cell[26096, 545, 12362, 248, 777, "Output"]
+Cell[25956, 541, 231, 4, 32, "Input"],
+Cell[26190, 547, 12357, 246, 777, "Output"]
 }, Open  ]]
 }
 ]
